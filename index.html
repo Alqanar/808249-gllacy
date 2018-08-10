@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header__logo">
-        <img src="img/logo.png" width="154" height="64" alt="Логотип магазина">
-      </a>
+      <img src="img/logo.png" width="154" height="64" alt="Логотип магазина">
       <nav class="main-menu">
         <ul class="main-menu__navigation">
           <li>
@@ -35,36 +34,123 @@
     </header>
     <main class="main-content">
       <h1 class="visual-hidden">Интернет-магазин мороженого Глэйси-шоп</h1>
-      <section class="background-slider">
-        <div class="background-slider__slide background-slider__slide--slide-1">
-          <p class="background-slider__text">Крем-брюле и пломбир с малиновым джемом</p>
-          <button class="orange-button orange-button--large background-slider__button" type="button" value="Заказать">Давайте оба!</button>
+      <section class="slider">
+        <div class="slider__slide slider__slide--slide-1">
+          <p class="slider__text">Крем-брюле и пломбир с малиновым джемом</p>
+          <button class="orange-button orange-button--large slider__button" type="button" value="Заказать">Давайте оба!</button>
         </div>
-        <div class="background-slider__slide background-slider__slide--slide-2">
-          <p class="background-slider__text">Шоколадный пломбир и лимонный сорбет</p>
-          <button class="orange-button orange-button--large background-slider__button" type="button" value="Заказать">Давайте оба!</button>
+        <div class="slider__slide slider__slide--slide-2">
+          <p class="slider__text">Шоколадный пломбир и лимонный сорбет</p>
+          <button class="orange-button orange-button--large slider__button" type="button" value="Заказать">Давайте оба!</button>
         </div>
-        <div class="background-slider__slide background-slider__slide--slide-3">
-          <p class="background-slider__text">Пломбир с помадкой и клубничный щербет</p>
-          <button class="orange-button orange-button--large background-slider__button" type="button" value="Заказать">Давайте оба!</button>
+        <div class="slider__slide slider__slide--slide-3">
+          <p class="slider__text">Пломбир с помадкой и клубничный щербет</p>
+          <button class="orange-button orange-button--large slider__button" type="button" value="Заказать">Давайте оба!</button>
         </div>
       </section>
       <section class="shares">
         <h2 class="visual-hidden">Действующие акции интернет-магазина</h2>
-        <article class="shares__wrapper shares__raspberry">
+        <article class="banner shares__raspberry">
           <p class="shares__caption">Малинка даром!</p>
           <p class="shares__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="orange-button" href="#">Хочу варенье!</a>
         </article>
-        <article class="shares__wrapper shares__chocolate">
+        <article class="banner shares__chocolate">
           <p class="shares__caption">Шоколадки даром!</p>
           <p class="shares__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="orange-button" href="#">Хочу шоколадки!</a>
         </article>
+      </section>
+      <section class="hits">
         <h2 class="visual-hidden">Популярные мороженки</h2>
-        <section>
-          
+        <ul class="hits__list">
+          <li class="hits__ice-cream">
+            <h3 class="hits__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <span class="hits__icon"></span>
+            <img class="hits__ice-cream-image" src="img/hits-1.png" alt="Сливочное мороженое с апельсиновым джемом">
+            <p class="hits__price">310 &#8381;
+              <span>/кг</span>
+            </p>
+          </li>
+          <li class="hits__ice-cream">
+            <h3 class="hits__title">Сливочно-кофейное с кусочками шоколада</h3>
+            <span class="hits__icon"></span>
+            <img class="hits__ice-cream-image" src="img/hits-2.png" alt="Сливочно-кофейное мороженое с шоколадом">
+            <p class="hits__price">380 &#8381;
+              <span>/кг</span>
+            </p>
+          </li>
+          <li class="hits__ice-cream">
+            <h3 class="hits__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <span class="hits__icon"></span>
+            <img class="hits__ice-cream-image" src="img/hits-3.png" alt="Сливочно-клубничное мороженое">
+            <p class="hits__price">355 &#8381;
+              <span>/кг</span>
+            </p>
+          </li>
+          <li class="hits__ice-cream">
+            <h3 class="hits__title">Сливочное крем-брюле с карамельной подливкой</h3>
+            <span class="hits__icon"></span>
+            <img class="hits__ice-cream-image" src="img/hits-4.png" alt="Крем-брюле с карамельной подливкой">
+            <p class="hits__price">415 &#8381;
+              <span>/кг</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <article class="features">
+        <h2 class="visual-hidden">Почему нужно выбрать именно нас?</h2>
+        <p class="features__about-us">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+        <ul class="features__about-product">
+          <li class="features__item">
+            <span class="features__ice-cream"></span>
+            <p class="features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+          </li>
+          <li class="features__item">
+            <span class="features__leaf"></span>
+            <p class="features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингрeдиенты и добавки произведены из натурального и экологически чистого сырья.</p>
+          </li>
+          <li class="features__item">
+            <span class="features__cow"></span>
+            <p class="features__text">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          </li>
+          <li class="features__item">
+            <span class="features__thermometer"></span>
+            <p class="features__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+          </li>
+        </ul>
+      </article>
+      <div>
+        <article class="banner new-in-blog">
+          <h2 class="visual-hidden">Публикации</h2>
+          <h3 class="new-in-blog__title">Новое в нашем блоге</h3>
+            <a class="new-in-blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        </article>
+        <section class="banner subscription">
+          <h2 class="visual-hidden">Подписка</h2>
+          <p class="subscription_text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <button class="orange-button" type="submit" value="Подписаться на рассылку">Отправить</button>
         </section>
+      </div>
+      <section class="contacts">
+        <h2 class="visual-hidden">Как нас найти</h2>
+        <div id="map" class="contacts__map"></div>
+        <div class="contacts__adress">
+          <p class="contacts__text">
+            Адрес главного офиса<br>
+            и офлайн-магазина:<br>
+            <b class="contacts__bold">
+              ул. Большая Конюшенная<br>
+              19/8, Санкт-Петербург
+            </b>
+          </p>
+          <p class="contacts__text">
+            Для заказов по телефону:<br>
+            <b class="contacts__bold">8 812 450-25-25</b><br>
+            (с 10 до 20 ежедневно)
+          </p>
+          <button class="orange-button" type="submit" value="Вызввать окно обратной связи">Форма обратной связи</button>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
@@ -109,5 +195,7 @@
         </p>
       </section>
     </footer>
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </body>
 </html>
