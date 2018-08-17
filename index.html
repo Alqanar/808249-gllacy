@@ -42,29 +42,29 @@
         </ul>
       </nav>
       <section class="buttons-menu">
-        <button class="buttons-menu__item buttons-menu__item--search" type="button" aria-label="поиск"></button>
-        <div class="popup popup--shadow">
+        <button class="buttons-menu__item buttons-menu__item--search" type="button" aria-label="Поиск"></button>
+        <div class="popup popup--shadow popup--search">
           <form action="https://echo.htmlacademy.ru" method="get">
             <label class="visual-hidden" for="field-search">Поиск по сайту</label>
             <input id="field-search" type="search" name="search" placeholder="Что ищем?">
           </form>
         </div>
         <a class="buttons-menu__item buttons-menu__item--login" href="#">Вход</a>
-        <div class="popup popup--shadow">
+        <section class="popup popup--shadow popup--login">
           <form action="https://echo.htmlacademy.ru" method="post">
             <p class="popup__row">
-              <label class="visual-hidden" for="user-login">Логин</label>
-              <input id="user-login" type="text" name="login" placeholder="Электронная почта">
+              <label class="visual-hidden" for="user-login">Электронная почта</label>
+              <input id="user-login" type="email" name="login" placeholder="Электронная почта">
             </p>
             <p class="popup__row">
               <label class="visual-hidden" for="user-password">Пароль</label>
               <input id="user-password" type="password" name="password" placeholder="Пароль">
             </p>
-            <button class="orange-button" type="submit-">Войти</button>
+            <button class="orange-button" type="submit">Войти</button>
             <a class="buttons-menu__link" href="#">Забыли пароль?</a>
             <a class="buttons-menu__link" href="#">Новая регистрация</a>
           </form>
-        </div>
+        </section>
         <a class="buttons-menu__item buttons-menu__item--basket" href="#">Пусто</a>
       </section>
       <div class="main-header__contacts">

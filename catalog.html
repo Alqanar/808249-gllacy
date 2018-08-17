@@ -25,9 +25,65 @@
         </ul>
       </nav>
       <section class="buttons-menu">
-        <button class="buttons-menu__item buttons-menu__item--search" type="button"></button>
-        <button class="buttons-menu__item buttons-menu__item--login" type="button">Войти</button>
-        <button class="buttons-menu__item buttons-menu__item--basket-active" type="button">2 товара</button>
+        <button class="buttons-menu__item buttons-menu__item--search" type="button" aria-label="Поиск"></button>
+        <div class="popup popup--shadow popup--search">
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <label class="visual-hidden" for="field-search">Поиск по сайту</label>
+            <input id="field-search" type="search" name="search" placeholder="Что ищем?">
+          </form>
+        </div>
+        <a class="buttons-menu__item buttons-menu__item--login" href="#">Вход</a>
+        <section class="popup popup--shadow popup--login">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <p class="popup__row">
+              <label class="visual-hidden" for="user-login">Электронная почта</label>
+              <input id="user-login" type="email" name="login" placeholder="Электронная почта">
+            </p>
+            <p class="popup__row">
+              <label class="visual-hidden" for="user-password">Пароль</label>
+              <input id="user-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <button class="orange-button" type="submit">Войти</button>
+            <a class="buttons-menu__link" href="#">Забыли пароль?</a>
+            <a class="buttons-menu__link" href="#">Новая регистрация</a>
+          </form>
+        </section>
+        <a class="buttons-menu__item buttons-menu__item--basket" href="#">2 товара</a>
+        <section class="popup popup--shadow ">
+          <table class="basket">
+            <caption class="visual-hidden">Товары в корзине</caption>
+            <tr>
+              <th class="visual-hidden">Удалить товар</th>
+              <th class="visual-hidden">Изображение товара</th>
+              <th class="visual-hidden">Наименование товара</th>
+              <th class="visual-hidden">Количество &#215; цена за 1 кг</th>
+              <th class="visual-hidden">Стоимость</th>
+            </tr>
+            <tr>
+              <td>
+                <button class="basket__delete-item" type="button">Удалить товар</button>
+              </td>
+              <td class="basket__image-item" aria-label="Картинка мороженки"></td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг &#215; 200 руб.</td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td>
+                <button class="basket__delete-item" type="button">Удалить товар</button>
+              </td>
+              <td class="basket__image-item" aria-label="Картинка мороженки"></td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг &#215; 300 руб.</td>
+              <td>450 руб.</td>
+            </tr>
+            <tr>
+              <td class="basket__row-bold" colspan="4">Итого:</td>
+              <td class="basket__row-bold">750 руб.</td>
+            </tr>
+          </table>
+          <a class="orange-button" href="#">Оформить заказ</a>
+        </section>
       </section>
       <div class="main-header__contacts">
         <p class="main-header__work-time">С 10 до 20, ежедневно</p>
@@ -45,9 +101,53 @@
     </header>
     <main class="content-catalog">
       <h1>Сливочное мороженое</h1>
-      <section class="filters">
-        <!-- здесь будет форма с фильтрами -->
-      </section>
+      <form class="filtres">
+        <h2 class="visual-hidden">Фильтр мороженок</h2>
+        <label class="filtres__label" for="select-sorting">Сортировка:</label>
+        <select class="filtres__block filtres__block--sorting" id="select-sorting">
+          <option value="popular" selected>по популярности</option>
+          <option value="from cheap">сначала недорогие</option>
+          <option value="from expensive">сначала дорогие</option>
+          <option value="fat content">по жирности</option>
+        </select>
+        <label class=filtres__label" for="filtres__range">Цена: 100 руб. – 500 руб.</label>
+        <input id="filtres__range" type="range" min="0" max="800" value="100">
+        <fieldset class="fat-content">
+          <legend class="filtres__label">Жирность:</legend>
+          <label>
+            <input class="fat-content__radio-item" type="radio" name="percent" value="0"> 0%
+          </label>
+          <label>
+            <input class="fat-content__radio-item" type="radio" name="percent" value="<10" checked> до 10%
+          </label>
+          <label>
+            <input class="fat-content__radio-item" type="radio" name="percent" value="<30"> до 30%
+          </label>
+          <label>
+            <input class="fat-content__radio-item" type="radio" name="percent" value=">30"> выше 30%
+          </label>
+        </fieldset>
+        <fieldset class="filler">
+          <legend class="filtres__label">Наполнители:</legend>
+          <label>
+            <input class="filler__checkbox-item" type="checkbox" name="chocolate" checked> шоколадные
+          </label>
+          <label>
+            <input class="filler__checkbox-item" type="checkbox" name="sugar" checked> сахарные присыпки
+          </label>
+          <label>
+            <input class="filler__checkbox-item" type="checkbox" name="fruits"> фрукты
+          </label>
+          <label>
+            <input class="filler__checkbox-item" type="checkbox" name="syrup"> сироп
+          </label>
+          <label>
+            <input class="filler__checkbox-item" type="checkbox" name="jam"> джем
+          </label>
+        </fieldset>
+        <button class="filtres__button" type="submit">Применить</button>
+      </form>
+      <h2 class="visual-hidden">Список сливочных мороженых</h2>
       <ul class="ice-cream-list">
         <li class="ice-cream-list__item">
           <img class="ice-cream-list__ice-cream-image" src="img/item-1.jpg" alt="Сливочное мороженое с апельсиновым джемом">
