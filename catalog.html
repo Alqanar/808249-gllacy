@@ -34,6 +34,7 @@
         </div>
         <a class="buttons-menu__item buttons-menu__item--login" href="#">Вход</a>
         <section class="popup popup--shadow popup--login">
+          <h2 class="visual-hidden">Форма входа</h2>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p class="popup__row">
               <label class="visual-hidden" for="user-login">Электронная почта</label>
@@ -63,7 +64,9 @@
               <td>
                 <button class="basket__delete-item" type="button">Удалить товар</button>
               </td>
-              <td class="basket__image-item" aria-label="Картинка мороженки"></td>
+              <td class="basket__image-item">
+                <img src="img/basket-item-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+              </td>
               <td>Пломбир с апельсиновым джемом</td>
               <td>1,5 кг &#215; 200 руб.</td>
               <td>300 руб.</td>
@@ -72,7 +75,9 @@
               <td>
                 <button class="basket__delete-item" type="button">Удалить товар</button>
               </td>
-              <td class="basket__image-item" aria-label="Картинка мороженки"></td>
+              <td class="basket__image-item">
+                <img src="img/basket-item-2.jpg" width="33" height="33" alt="Клубничный пломбир">
+              </td>
               <td>Клубничный пломбир с присыпкой из белого шоколада</td>
               <td>1,5 кг &#215; 300 руб.</td>
               <td>450 руб.</td>
@@ -101,19 +106,19 @@
     </header>
     <main class="content-catalog">
       <h1>Сливочное мороженое</h1>
-      <form class="filtres">
+      <form class="filters">
         <h2 class="visual-hidden">Фильтр мороженок</h2>
-        <label class="filtres__label" for="select-sorting">Сортировка:</label>
-        <select class="filtres__block filtres__block--sorting" id="select-sorting">
+        <label class="filters__label" for="select-sorting">Сортировка:</label>
+        <select class="filters__block filters__block--sorting" id="select-sorting">
           <option value="popular" selected>по популярности</option>
           <option value="from cheap">сначала недорогие</option>
           <option value="from expensive">сначала дорогие</option>
           <option value="fat content">по жирности</option>
         </select>
-        <label class=filtres__label" for="filtres__range">Цена: 100 руб. – 500 руб.</label>
-        <input id="filtres__range" type="range" min="0" max="800" value="100">
+        <label class="filters__label" for="filters__range">Цена: 100 руб. – 500 руб.</label>
+        <input id="filters__range" type="range" min="0" max="800" value="100">
         <fieldset class="fat-content">
-          <legend class="filtres__label">Жирность:</legend>
+          <legend class="filters__label">Жирность:</legend>
           <label>
             <input class="fat-content__radio-item" type="radio" name="percent" value="0"> 0%
           </label>
@@ -128,7 +133,7 @@
           </label>
         </fieldset>
         <fieldset class="filler">
-          <legend class="filtres__label">Наполнители:</legend>
+          <legend class="filters__label">Наполнители:</legend>
           <label>
             <input class="filler__checkbox-item" type="checkbox" name="chocolate" checked> шоколадные
           </label>
@@ -145,7 +150,7 @@
             <input class="filler__checkbox-item" type="checkbox" name="jam"> джем
           </label>
         </fieldset>
-        <button class="filtres__button" type="submit">Применить</button>
+        <button class="filters__button" type="submit">Применить</button>
       </form>
       <h2 class="visual-hidden">Список сливочных мороженых</h2>
       <ul class="ice-cream-list">
