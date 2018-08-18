@@ -15,6 +15,23 @@
         <ul class="main-menu__navigation">
           <li>
             <a class="main-menu__item main-menu__item--active" href="#">Каталог</a>
+            <ul class="popup popup--shadow sub-menu">
+              <li>
+                <a class="sub-menu__item sub-menu__item-bold" href="#">Новинки</a>
+              </li>
+              <li>
+                <a class="sub-menu__item" href="catalog.html">Сливочное</a>
+              </li>
+              <li>
+                <a class="sub-menu__item" href="#">Щербеты</a>
+              </li>
+              <li>
+                <a class="sub-menu__item" href="#">Фруктовый лед</a>
+              </li>
+              <li>
+                <a class="sub-menu__item" href="#">Мелорин</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a class="main-menu__item" href="#">Доставка и оплата</a>
@@ -24,15 +41,15 @@
           </li>
         </ul>
       </nav>
-      <section class="buttons-menu">
-        <button class="buttons-menu__item buttons-menu__item--search" type="button" aria-label="Поиск"></button>
+      <section class="controls-menu">
+        <a class="controls-menu__item controls-menu__item--search" href="#" aria-label="Поиск"></a>
         <div class="popup popup--shadow popup--search">
           <form action="https://echo.htmlacademy.ru" method="get">
             <label class="visual-hidden" for="field-search">Поиск по сайту</label>
             <input id="field-search" type="search" name="search" placeholder="Что ищем?">
           </form>
         </div>
-        <a class="buttons-menu__item buttons-menu__item--login" href="#">Вход</a>
+        <a class="controls-menu__item controls-menu__item--login" href="#">Вход</a>
         <section class="popup popup--shadow popup--login">
           <h2 class="visual-hidden">Форма входа</h2>
           <form action="https://echo.htmlacademy.ru" method="post">
@@ -45,11 +62,11 @@
               <input id="user-password" type="password" name="password" placeholder="Пароль">
             </p>
             <button class="orange-button" type="submit">Войти</button>
-            <a class="buttons-menu__link" href="#">Забыли пароль?</a>
-            <a class="buttons-menu__link" href="#">Новая регистрация</a>
+            <a class="controls-menu__link" href="#">Забыли пароль?</a>
+            <a class="controls-menu__link" href="#">Новая регистрация</a>
           </form>
         </section>
-        <a class="buttons-menu__item buttons-menu__item--basket" href="#">2 товара</a>
+        <a class="controls-menu__item controls-menu__item--basket" href="#">2 товара</a>
         <section class="popup popup--shadow ">
           <h2 class="visual-hidden">Выбранные товары</h2>
           <table class="basket">
@@ -107,7 +124,7 @@
     </header>
     <main class="content-catalog">
       <h1>Сливочное мороженое</h1>
-      <form class="filters">
+      <form class="filters" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="visual-hidden">Фильтр мороженок</h2>
         <label class="filters__label" for="select-sorting">Сортировка:</label>
         <select class="filters__block filters__block--sorting" id="select-sorting">
