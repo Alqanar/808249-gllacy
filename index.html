@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин мороженого Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -12,32 +13,46 @@
         <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина">
       </div>
       <nav class="main-menu">
-        <ul class="main-menu__navigation">
-          <li>
-            <a class="main-menu__item" href="#">Каталог</a>
-            <ul class="popup popup--shadow sub-menu">
+        <ul class="same-list main-menu__navigation">
+          <li class="main-menu__item main-menu__item--active">
+            <a href="#">
+              <div class="main-menu__item-wrapper">
+                <p class="main-menu__link">Каталог</p>
+              </div>
+            </a>
+            <ul class="same-list popup popup--shadow sub-menu">
               <li>
-                <a class="sub-menu__item sub-menu__item-bold" href="#">Новинки</a>
+                <div class="sub-menu__item-bold">
+                  <a class="sub-menu__link sub-menu__link--new" href="#">Новинки</a>
+                </div>
               </li>
-              <li>
-                <a class="sub-menu__item" href="catalog.html">Сливочное</a>
+              <li class="sub-menu__row">
+                <a class="sub-menu__link" href="catalog.html">Сливочное</a>
               </li>
-              <li>
-                <a class="sub-menu__item" href="#">Щербеты</a>
+              <li class="sub-menu__row">
+                <a class="sub-menu__link" href="#">Щербеты</a>
               </li>
-              <li>
-                <a class="sub-menu__item" href="#">Фруктовый лед</a>
+              <li class="sub-menu__row">
+                <a class="sub-menu__link" href="#">Фруктовый лед</a>
               </li>
-              <li>
-                <a class="sub-menu__item" href="#">Мелорин</a>
+              <li class="sub-menu__row">
+                <a class="sub-menu__link" href="#">Мелорин</a>
               </li>
             </ul>
           </li>
-          <li>
-            <a class="main-menu__item" href="#">Доставка и оплата</a>
+          <li class="main-menu__item">
+            <a href="#">
+              <div class="main-menu__item-wrapper">
+                <p class="main-menu__link">Доставка и оплата</p>
+              </div>
+            </a>
           </li>
-          <li>
-            <a class="main-menu__item" href="#">О Компании</a>
+          <li class="main-menu__item">
+            <a href="#">
+              <div class="main-menu__item-wrapper">
+                <p class="main-menu__link">О Компании</p>
+              </div>
+            </a>
           </li>
         </ul>
       </nav>
@@ -105,7 +120,7 @@
       <div>
         <h2 class="visual-hidden">Популярные мороженки</h2>
       </div>
-      <ul class="ice-cream-list">
+      <ul class="same-list ice-cream-list">
         <li class="ice-cream-list__item">
           <span class="ice-cream-list__icon"></span>
           <img class="ice-cream-list__ice-cream-image" src="img/item-1.jpg" alt="Сливочное мороженое с апельсиновым джемом">
@@ -113,7 +128,7 @@
             <span>/кг</span>
           </p>
           <a class="ice-cream-list__title" href="#">
-            <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <h3 class="ice-cream-list__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </a>
           <a class="orange-button" href="#">Быстрый просмотр</a>
         </li>
@@ -124,7 +139,7 @@
             <span>/кг</span>
           </p>
           <a class="ice-cream-list__title" href="#">
-            <h3>Сливочно-кофейное с кусочками шоколада</h3>
+            <h3 class="ice-cream-list__text">Сливочно-кофейное с кусочками шоколада</h3>
           </a>
           <a class="orange-button" href="#">Быстрый просмотр</a>
         </li>
@@ -135,7 +150,7 @@
             <span>/кг</span>
           </p>
           <a class="ice-cream-list__title" href="#">
-            <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <h3 class="ice-cream-list__text">Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </a>
           <a class="orange-button" href="#">Быстрый просмотр</a>
         </li>
@@ -146,7 +161,7 @@
             <span>/кг</span>
           </p>
           <a class="ice-cream-list__title" href="#">
-            <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+            <h3 class="ice-cream-list__text">Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
           <a class="orange-button" href="#">Быстрый просмотр</a>
         </li>
@@ -154,7 +169,7 @@
       <section class="features">
         <h2 class="visual-hidden">Почему нужно выбрать именно нас?</h2>
         <p class="features__about-us">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-        <ul class="features__about-product">
+        <ul class="same-list features__about-product">
           <li class="features__item">
             <span class="features__ice-cream"></span>
             <p class="features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
@@ -206,7 +221,7 @@
       </section>
     </main>
     <footer class="main-footer">
-      <ul class="main-footer__social">
+      <ul class="same-list main-footer__social">
         <li>
           <a class="main-footer__social-button main-footer__social-button--tw" href="#">Твиттер</a>
         </li>
@@ -221,7 +236,7 @@
         </li>
       </ul>
       <nav class="footer-menu">
-        <ul class="footer-menu__navigation">
+        <ul class="same-list footer-menu__navigation">
           <li>
             <span class="footer-menu__heart"></span>
             <a class="footer-menu__item footer-menu__item--bold" href="#">Для поставщиков</a>
@@ -242,7 +257,7 @@
           <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTMLAcademy">
         </a>
         <p class="footer-copyright__author">Сделано в
-          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         &#169; 2017
         </p>
       </section>
