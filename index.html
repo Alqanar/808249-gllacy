@@ -57,31 +57,62 @@
         </ul>
       </nav>
       <section class="controls-menu">
-        <a class="controls-menu__item controls-menu__item--search" href="#" aria-label="Поиск"></a>
-        <div class="popup popup--shadow popup--search">
+        <a class="controls-menu__item controls-menu__item--search" href="#" aria-label="Поиск">
+          <span class="controls-menu__image-loupe">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+              <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
+            </svg>
+          </span>
+        </a>
+        <section class="popup popup--shadow popup--search">
           <form action="https://echo.htmlacademy.ru" method="get">
             <label class="visual-hidden" for="field-search">Поиск по сайту</label>
-            <input id="field-search" type="search" name="search" placeholder="Что ищем?">
+            <input class="popup_form-field controls-menu__field" id="field-search" type="search" name="search" placeholder="Что ищем?">
           </form>
-        </div>
-        <a class="controls-menu__item controls-menu__item--login" href="#">Вход</a>
-        <section class="popup popup--shadow popup--login">
+        </section>
+        <a class="controls-menu__item controls-menu__item--login" href="#">
+          <span class="controls-menu__image-entranse">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
+              <g fill="#fff">
+                <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
+                <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+              </g>
+            </svg>
+          </span>
+          Вход
+        </a>
+        <section class="popup popup--shadow popup-login">
           <h2 class="visual-hidden">Форма входа</h2>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p class="popup__row">
               <label class="visual-hidden" for="user-login">Электронная почта</label>
-              <input id="user-login" type="email" name="login" placeholder="Электронная почта">
+              <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта">
             </p>
             <p class="popup__row">
               <label class="visual-hidden" for="user-password">Пароль</label>
-              <input id="user-password" type="password" name="password" placeholder="Пароль">
+              <input class="popup_form-field controls-menu__field" id="user-password" type="password" name="password" placeholder="Пароль">
             </p>
-            <button class="orange-button" type="submit">Войти</button>
-            <a class="controls-menu__link" href="#">Забыли пароль?</a>
-            <a class="controls-menu__link" href="#">Новая регистрация</a>
+            <div class="popup-login__footer">
+              <button class="orange-button orange-button__popup-login" type="submit">Войти</button>
+              <div class="popup-login__two-links">
+                <a class="popup-login__link" href="#">Забыли пароль?</a>
+                <a class="popup-login__link" href="#">Новая регистрация</a>
+              </div>
+            </div>
           </form>
         </section>
-        <a class="controls-menu__item controls-menu__item--basket" href="#">Пусто</a>
+        <a class="controls-menu__item controls-menu__item--basket" href="#">
+          <span class="controls-menu__image-basket">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+              <g fill="#fff">
+                <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
+                <circle cx="6.984" cy="18" r="2"/>
+                <circle cx="15.984" cy="18" r="2"/>
+              </g>
+            </svg>
+          </span>
+          Пусто
+        </a>
       </section>
       <div class="main-header__contacts">
         <p class="main-header__work-time">С 10 до 20, ежедневно</p>
@@ -93,15 +124,15 @@
       <section class="slider">
         <div class="slider__slide slider__slide--slide-1">
           <p class="slider__text">Крем-брюле и пломбир с малиновым джемом</p>
-          <a class="orange-button orange-button--large slider__button" href="#">Давайте оба!</a>
+          <a class="orange-button--large" href="#">Давайте оба!</a>
         </div>
         <div class="slider__slide slider__slide--slide-2">
           <p class="slider__text">Шоколадный пломбир и лимонный сорбет</p>
-          <a class="orange-button orange-button--large slider__button" href="#">Давайте оба!</a>
+          <a class="orange-button--large" href="#">Давайте оба!</a>
         </div>
         <div class="slider__slide slider__slide--slide-3">
           <p class="slider__text">Пломбир с помадкой и клубничный щербет</p>
-          <a class="orange-button orange-button--large slider__button" href="#">Давайте оба!</a>
+          <a class="orange-button--large" href="#">Давайте оба!</a>
         </div>
       </section>
       <section class="shares">
@@ -109,12 +140,12 @@
         <article class="banner shares__raspberry">
           <p class="shares__caption">Малинка даром!</p>
           <p class="shares__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="orange-button" href="#">Хочу варенье!</a>
+          <a class="orange-button shares__orange-button" href="#">Хочу варенье!</a>
         </article>
         <article class="banner shares__chocolate">
           <p class="shares__caption">Шоколадки даром!</p>
           <p class="shares__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="orange-button" href="#">Хочу шоколадки!</a>
+          <a class="orange-button shares__orange-button" href="#">Хочу шоколадки!</a>
         </article>
       </section>
       <div>
@@ -122,48 +153,56 @@
       </div>
       <ul class="same-list ice-cream-list">
         <li class="ice-cream-list__item">
-          <span class="ice-cream-list__icon"></span>
-          <img class="ice-cream-list__ice-cream-image" src="img/item-1.jpg" alt="Сливочное мороженое с апельсиновым джемом">
-          <p class="ice-cream-list__price">310 &#8381;
-            <span>/кг</span>
-          </p>
+          <div class="ice-cream-list__image-wrapper">
+            <span class="ice-cream-list__icon"></span>
+            <img class="ice-cream-list__ice-cream-image" src="img/item-1.jpg" alt="Сливочное мороженое с апельсиновым джемом">
+            <p class="ice-cream-list__price">310&#8381;<span>/кг</span></p>
+          </div>
           <a class="ice-cream-list__title" href="#">
             <h3 class="ice-cream-list__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </a>
-          <a class="orange-button" href="#">Быстрый просмотр</a>
+          <div class="ice-cream-list__wrapper-button">
+            <a class="orange-button ice-cream-list__orange-button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="ice-cream-list__item">
-          <span class="ice-cream-list__icon"></span>
-          <img class="ice-cream-list__ice-cream-image" src="img/item-2.jpg" alt="Сливочно-кофейное мороженое с шоколадом">
-          <p class="ice-cream-list__price">380 &#8381;
-            <span>/кг</span>
-          </p>
+          <div class="ice-cream-list__image-wrapper">
+            <span class="ice-cream-list__icon"></span>
+            <img class="ice-cream-list__ice-cream-image" src="img/item-2.jpg" alt="Сливочно-кофейное мороженое с шоколадом">
+            <p class="ice-cream-list__price">380&#8381;<span>/кг</span></p>
+          </div>
           <a class="ice-cream-list__title" href="#">
             <h3 class="ice-cream-list__text">Сливочно-кофейное с кусочками шоколада</h3>
           </a>
-          <a class="orange-button" href="#">Быстрый просмотр</a>
+          <div class="ice-cream-list__wrapper-button">
+            <a class="orange-button ice-cream-list__orange-button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="ice-cream-list__item">
-          <span class="ice-cream-list__icon"></span>
-          <img class="ice-cream-list__ice-cream-image" src="img/item-3.jpg" alt="Сливочно-клубничное мороженое">
-          <p class="ice-cream-list__price">355 &#8381;
-            <span>/кг</span>
-          </p>
+          <div class="ice-cream-list__image-wrapper">
+            <span class="ice-cream-list__icon"></span>
+            <img class="ice-cream-list__ice-cream-image" src="img/item-3.jpg" alt="Сливочно-клубничное мороженое">
+            <p class="ice-cream-list__price">355&#8381;<span>/кг</span></p>
+          </div>
           <a class="ice-cream-list__title" href="#">
             <h3 class="ice-cream-list__text">Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </a>
-          <a class="orange-button" href="#">Быстрый просмотр</a>
+          <div class="ice-cream-list__wrapper-button">
+            <a class="orange-button ice-cream-list__orange-button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="ice-cream-list__item">
-          <span class="ice-cream-list__icon"></span>
-          <img class="ice-cream-list__ice-cream-image" src="img/item-4.jpg" alt="Крем-брюле с карамельной подливкой">
-          <p class="ice-cream-list__price">415 &#8381;
-            <span>/кг</span>
-          </p>
+          <div class="ice-cream-list__image-wrapper">
+            <span class="ice-cream-list__icon"></span>
+            <img class="ice-cream-list__ice-cream-image" src="img/item-4.jpg" alt="Крем-брюле с карамельной подливкой">
+            <p class="ice-cream-list__price">415&#8381;<span>/кг</span></p>
+          </div>
           <a class="ice-cream-list__title" href="#">
             <h3 class="ice-cream-list__text">Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
-          <a class="orange-button" href="#">Быстрый просмотр</a>
+          <div class="ice-cream-list__wrapper-button">
+            <a class="orange-button ice-cream-list__orange-button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
       </ul>
       <section class="features">
@@ -188,35 +227,47 @@
           </li>
         </ul>
       </section>
-      <div>
+      <div class="banner-wrapper">
         <article class="banner new-in-blog">
           <h2 class="new-in-blog__title">Новое в нашем блоге</h2>
-          <a class="new-in-blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="new-in-blog__link" href="#">
+            <p>10 способов сервировки фруктовых щербетов к столу</p>
+          </a>
         </article>
         <section class="banner subscription">
           <h2 class="visual-hidden">Подписка</h2>
           <p class="subscription_text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <button class="orange-button" type="submit" value="Подписаться на рассылку">Отправить</button>
+          <div class="subscription_form-wrapper">
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <p class="popup__row subscription__row">
+                <label class="visual-hidden" for="user-login">Электронная почта</label>
+                <input class="popup_form-field" id="user-login" type="email" name="login" placeholder="Электронная почта">
+              </p>
+            </form>
+            <button class="orange-button subscription__orange-button" type="submit" value="Подписаться на рассылку">Отправить</button>
+          </div>
         </section>
       </div>
       <section class="contacts">
         <h2 class="visual-hidden">Как нас найти</h2>
-        <div id="map" class="contacts__map"></div>
+        <div class="contacts__map" id="map"></div>
         <div class="contacts__adress">
-          <p class="contacts__text">
-            Адрес главного офиса<br>
-            и офлайн-магазина:<br>
-            <b class="contacts__bold">
-              ул. Большая Конюшенная<br>
-              19/8, Санкт-Петербург
-            </b>
+          <div class="contacts__text-adress">
+            <p class="contacts__text">
+              Адрес главного офиса<br>
+              и офлайн-магазина:<br>
+              <b class="contacts__bold contacts__bold__adress">
+                ул. Большая Конюшенная<br>
+                19/8, Санкт-Петербург
+              </b>
+            </p>
+            <p class="contacts__text">
+              Для заказов по телефону:<br>
+              <b class="contacts__bold contacts__bold__telephone">8 812 450-25-25</b><br>
+              (с 10 до 20 ежедневно)
           </p>
-          <p class="contacts__text">
-            Для заказов по телефону:<br>
-            <b class="contacts__bold">8 812 450-25-25</b><br>
-            (с 10 до 20 ежедневно)
-          </p>
-          <button class="orange-button" type="submit" value="Вызввать окно обратной связи">Форма обратной связи</button>
+          </div>
+          <button class="orange-button contacts__orange-button" type="submit" value="Вызввать окно обратной связи">Форма обратной связи</button>
         </div>
       </section>
     </main>
@@ -263,21 +314,21 @@
       </section>
     </footer>
     <section class="popup modal-feedback">
-      <h2>Мы обязательно вам ответим!</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="popup__row">
+      <h2 class="modal-feedback__title">Мы обязательно вам ответим!</h2>
+      <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="popup__modal-feedback-row">
           <label class="visual-hidden" for="modal-feedback__user-name">Представьтесь</label>
-          <input id="modal-feedback__user-name" type="text" name="user-name" placeholder="Как вас зовут?">
+          <input class="popup_form-field modal-feedback__popup_form-field" id="modal-feedback__user-name" type="text" name="user-name" placeholder="Как вас зовут?">
         </p>
-        <p class="popup__row">
+        <p class="popup__modal-feedback-row">
           <label class="visual-hidden" for="modal-feedback__e-mail">Укажите электронную почту для ответа</label>
-          <input id="modal-feedback__e-mail" type="email" name="email" placeholder="Ваша почта для ответа?">
+          <input class="popup_form-field modal-feedback__popup_form-field" id="modal-feedback__e-mail" type="email" name="email" placeholder="Ваша почта для ответа?">
         </p>
-        <p class="popup__row">
+        <p class="popup__modal-feedback-row">
           <label class="visual-hidden" for="modal-feedback__e-mail">Текст вашего вопроса или предложения</label>
-          <textarea id="modal-feedback__feedback" name="feedback" rows="6" placeholder="Напишите что-нибудь"></textarea>
+          <textarea class="modal-feedback__textarea" id="modal-feedback__feedback" name="feedback" rows="6" placeholder="Напишите что-нибудь"></textarea>
         </p>
-        <button class="orange-button" type="submit">Отправить</button>
+        <button class="orange-button modal-feedback__orange-button" type="submit">Отправить</button>
       </form>
       <button class="modal-feedback__close" type="button">Закрыть</button>
     </section>
