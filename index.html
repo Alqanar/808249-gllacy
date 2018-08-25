@@ -8,24 +8,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div class="center-area">
-      <header class="main-header">
+    <header class="main-header">
+      <div class="main-header__menu-wrapper">
         <div class="logo">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина">
         </div>
         <nav class="main-menu">
           <ul class="same-list main-menu__navigation">
             <li class="main-menu__item">
-              <a href="#">
-                <div class="main-menu__item-wrapper">
-                  <p class="main-menu__link">Каталог</p>
-                </div>
+              <a class="main-menu__item-wrapper"href="#">
+                <p class="main-menu__link">Каталог</p>
               </a>
               <ul class="same-list popup popup--shadow sub-menu">
-                <li>
-                  <div class="sub-menu__item-bold">
-                    <a class="sub-menu__link sub-menu__link--new" href="#">Новинки</a>
-                  </div>
+                <li class="sub-menu__row sub-menu__row-line">
+                  <a class="sub-menu__link sub-menu__item-bold sub-menu__link--new " href="#">Новинки</a>
                 </li>
                 <li class="sub-menu__row">
                   <a class="sub-menu__link" href="catalog.html">Сливочное</a>
@@ -42,85 +38,89 @@
               </ul>
             </li>
             <li class="main-menu__item">
-              <a href="#">
-                <div class="main-menu__item-wrapper">
-                  <p class="main-menu__link">Доставка и оплата</p>
-                </div>
+              <a class="main-menu__item-wrapper" href="#">
+                <p class="main-menu__link">Доставка и оплата</p>
               </a>
             </li>
             <li class="main-menu__item">
-              <a href="#">
-                <div class="main-menu__item-wrapper">
-                  <p class="main-menu__link">О Компании</p>
-                </div>
+              <a class="main-menu__item-wrapper" href="#">
+                <p class="main-menu__link">О Компании</p>
               </a>
             </li>
           </ul>
         </nav>
-        <section class="controls-menu">
-          <a class="controls-menu__item controls-menu__item--search" href="#" aria-label="Поиск">
-            <span class="controls-menu__image-loupe">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
-                <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
-              </svg>
-            </span>
-          </a>
-          <section class="popup popup--shadow popup--search">
-            <form action="https://echo.htmlacademy.ru" method="get">
-              <label class="visual-hidden" for="field-search">Поиск по сайту</label>
-              <input class="popup_form-field controls-menu__field" id="field-search" type="search" name="search" placeholder="Что ищем?">
-            </form>
-          </section>
-          <a class="controls-menu__item controls-menu__item--login" href="#">
-            <span class="controls-menu__image-entranse">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
-                <g fill="#fff">
-                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
-                  <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
-                </g>
-              </svg>
-            </span>
-            Вход
-          </a>
-          <section class="popup popup--shadow popup-login">
-            <h2 class="visual-hidden">Форма входа</h2>
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <p class="popup__row">
-                <label class="visual-hidden" for="user-login">Электронная почта</label>
-                <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта">
-              </p>
-              <p class="popup__row">
-                <label class="visual-hidden" for="user-password">Пароль</label>
-                <input class="popup_form-field controls-menu__field" id="user-password" type="password" name="password" placeholder="Пароль">
-              </p>
-              <div class="popup-login__footer">
-                <button class="orange-button orange-button__popup-login" type="submit">Войти</button>
-                <div class="popup-login__two-links">
-                  <a class="popup-login__link" href="#">Забыли пароль?</a>
-                  <a class="popup-login__link" href="#">Новая регистрация</a>
+        <ul class="same-list controls-menu">
+          <li class="controls-menu__wrapper">
+            <a class="controls-menu__item controls-menu__item--search" href="#" aria-label="Поиск">
+              <span class="controls-menu__image-loupe">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+                  <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
+                </svg>
+              </span>
+            </a>
+            <section class="popup popup--shadow popup--search">
+              <form action="https://echo.htmlacademy.ru" method="get">
+                <label class="visual-hidden" for="field-search">Поиск по сайту</label>
+                <input class="popup_form-field controls-menu__field" id="field-search" type="search" name="search" placeholder="Что ищем?">
+              </form>
+            </section>
+          </li>
+          <li class="controls-menu__wrapper">
+            <a class="controls-menu__item controls-menu__item--login" href="#">
+              <span class="controls-menu__image-entranse">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
+                  <g fill="#fff">
+                    <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
+                    <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+                  </g>
+                </svg>
+              </span>
+              Вход
+            </a>
+            <section class="popup popup--shadow popup-login">
+              <h2 class="visual-hidden">Форма входа</h2>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <p class="popup__row">
+                  <label class="visual-hidden" for="user-login">Электронная почта</label>
+                  <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта">
+                </p>
+                <p class="popup__row">
+                  <label class="visual-hidden" for="user-password">Пароль</label>
+                  <input class="popup_form-field controls-menu__field" id="user-password" type="password" name="password" placeholder="Пароль">
+                </p>
+                <div class="popup-login__footer">
+                  <button class="orange-button orange-button__popup-login" type="submit">Войти</button>
+                  <div class="popup-login__two-links">
+                    <a class="popup-login__link" href="#">Забыли пароль?</a>
+                    <a class="popup-login__link" href="#">Новая регистрация</a>
+                  </div>
                 </div>
-              </div>
-            </form>
-          </section>
-          <a class="controls-menu__item controls-menu__item--basket" href="#">
-            <span class="controls-menu__image-basket">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
-                <g fill="#fff">
-                  <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
-                  <circle cx="6.984" cy="18" r="2"/>
-                  <circle cx="15.984" cy="18" r="2"/>
-                </g>
-              </svg>
-            </span>
-            Пусто
-          </a>
-        </section>
-        <div class="main-header__contacts">
-          <p class="main-header__work-time">С 10 до 20, ежедневно</p>
-          <p class="main-header__telephon">8 812 450-25-25</p>
-        </div>
-      </header>
-      <main class="main-content">
+              </form>
+            </section>
+          </li>
+          <li class="controls-menu__wrapper">
+            <a class="controls-menu__item controls-menu__item--basket" href="#">
+              <span class="controls-menu__image-basket">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                  <g fill="#fff">
+                    <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
+                    <circle cx="6.984" cy="18" r="2"/>
+                    <circle cx="15.984" cy="18" r="2"/>
+                  </g>
+                </svg>
+              </span>
+              Пусто
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-header__contacts">
+        <p class="main-header__work-time">С 10 до 20, ежедневно</p>
+        <p class="main-header__telephon">8 812 450-25-25</p>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="center-area">
         <h1 class="visual-hidden">Интернет-магазин мороженого Глэйси-шоп</h1>
         <section class="slider">
           <div class="slider__slide slider__slide--slide-1">
@@ -149,9 +149,7 @@
             <a class="orange-button shares__orange-button" href="#">Хочу шоколадки!</a>
           </article>
         </section>
-        <div>
-          <h2 class="visual-hidden">Популярные мороженки</h2>
-        </div>
+        <h2 class="visual-hidden">Популярные мороженки</h2>
         <ul class="same-list ice-cream-list">
           <li class="ice-cream-list__item">
             <div class="ice-cream-list__image-wrapper">
@@ -249,72 +247,72 @@
             </div>
           </section>
         </div>
-        <section class="contacts">
-          <h2 class="visual-hidden">Как нас найти</h2>
-          <div class="contacts__map" id="map"></div>
-          <div class="contacts__adress">
-            <div class="contacts__text-adress">
-              <p class="contacts__text">
-                Адрес главного офиса<br>
-                и офлайн-магазина:<br>
-                <b class="contacts__bold contacts__bold__adress">
-                  ул. Большая Конюшенная<br>
-                  19/8, Санкт-Петербург
-                </b>
-              </p>
-              <p class="contacts__text">
-                Для заказов по телефону:<br>
-                <b class="contacts__bold contacts__bold__telephone">8 812 450-25-25</b><br>
-                (с 10 до 20 ежедневно)
+      </div>
+      <section class="contacts"> <!-- Start Map -->
+        <h2 class="visual-hidden">Как нас найти</h2>
+        <div class="contacts__map" id="map"></div>
+        <div class="contacts__adress">
+          <div class="contacts__text-adress">
+            <p class="contacts__text">
+              Адрес главного офиса<br>
+              и офлайн-магазина:<br>
+              <b class="contacts__bold contacts__bold__adress">
+                ул. Большая Конюшенная<br>
+                19/8, Санкт-Петербург
+              </b>
             </p>
-            </div>
-            <button class="orange-button contacts__orange-button" type="submit" value="Вызввать окно обратной связи">Форма обратной связи</button>
+            <p class="contacts__text">
+              Для заказов по телефону:<br>
+              <b class="contacts__bold contacts__bold__telephone">8 812 450-25-25</b><br>
+              (с 10 до 20 ежедневно)
+          </p>
           </div>
-        </section>
-      </main>
-      <footer class="main-footer">
-        <ul class="same-list main-footer__social">
+          <button class="orange-button contacts__orange-button" type="submit" value="Вызввать окно обратной связи">Форма обратной связи</button>
+        </div>
+      </section> <!-- End Map -->
+    </main>
+    <footer class="main-footer">
+      <ul class="same-list main-footer__social">
+        <li>
+          <a class="main-footer__social-button main-footer__social-button--tw" href="#">Твиттер</a>
+        </li>
+        <li>
+          <a class="main-footer__social-button main-footer__social-button--inst" href="#">Инстаграм</a>
+        </li>
+        <li>
+          <a class="main-footer__social-button main-footer__social-button--fb" href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a class="main-footer__social-button main-footer__social-button--vk" href="#">ВКонтакте</a>
+        </li>
+      </ul>
+      <nav class="footer-menu">
+        <ul class="same-list footer-menu__navigation">
           <li>
-            <a class="main-footer__social-button main-footer__social-button--tw" href="#">Твиттер</a>
+            <span class="footer-menu__heart"></span>
+            <a class="footer-menu__item footer-menu__item--bold" href="#">Для поставщиков</a>
           </li>
           <li>
-            <a class="main-footer__social-button main-footer__social-button--inst" href="#">Инстаграм</a>
+            <a class="footer-menu__item" href="#">О производстве</a>
           </li>
           <li>
-            <a class="main-footer__social-button main-footer__social-button--fb" href="#">Фейсбук</a>
+            <a class="footer-menu__item" href="#">Наши документы</a>
           </li>
           <li>
-            <a class="main-footer__social-button main-footer__social-button--vk" href="#">ВКонтакте</a>
+            <a class="footer-menu__item" href="#">Экологические стандарты</a>
           </li>
         </ul>
-        <nav class="footer-menu">
-          <ul class="same-list footer-menu__navigation">
-            <li>
-              <span class="footer-menu__heart"></span>
-              <a class="footer-menu__item footer-menu__item--bold" href="#">Для поставщиков</a>
-            </li>
-            <li>
-              <a class="footer-menu__item" href="#">О производстве</a>
-            </li>
-            <li>
-              <a class="footer-menu__item" href="#">Наши документы</a>
-            </li>
-            <li>
-              <a class="footer-menu__item" href="#">Экологические стандарты</a>
-            </li>
-          </ul>
-        </nav>
-        <section class="footer-copyright">
-          <a class="footer-copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTMLAcademy">
-          </a>
-          <p class="footer-copyright__author">Сделано в
-            <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-          &#169; 2017
-          </p>
-        </section>
-      </footer>
-    </div>
+      </nav>
+      <section class="footer-copyright">
+        <a class="footer-copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTMLAcademy">
+        </a>
+        <p class="footer-copyright__author">Сделано в
+          <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        &#169; 2017
+        </p>
+      </section>
+    </footer>
     <section class="popup modal-feedback">
       <h2 class="modal-feedback__title">Мы обязательно вам ответим!</h2>
       <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
