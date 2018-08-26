@@ -979,19 +979,75 @@ a {
 .main-footer {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 26px;
+  padding-top: 18px;
 }
 
 .main-footer--separated {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/*.main-footer__social-button {
+.main-footer__social {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 4px;
+}
+
+.main-footer__social-button {
+  display: inline-block;
   width: 38px;
   height: 38px;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
+  opacity: 0.8;
   margin-right: 11px;
-}*/
+  text-indent: -10000px;
+}
+
+.main-footer__social-button:hover {
+  opacity: 1;
+}
+
+.main-footer__social-button:active {
+  opacity: 0.7;
+}
+
+.main-footer__social-button--tw {
+  background-image: url(../img/twitter.svg);
+  background-repeat: no-repeat;
+}
+
+.main-footer__social-button--inst {
+  background-image: url(../img/instagram.svg);
+  background-repeat: no-repeat;
+}
+
+.main-footer__social-button--fb {
+  background-image: url(../img/fb.svg);
+  background-repeat: no-repeat;
+}
+
+.main-footer__social-button--vk {
+  background-image: url(../img/vk.svg);
+  background-repeat: no-repeat;
+}
+
+.footer-menu {
+  margin-top: auto;
+  margin-bottom: 4px;
+}
+
+.footer-menu__navigation {
+  display: flex;
+}
+
+.main-footer__column-wrapper {
+  margin-right: 32px;
+}
+
+.footer-menu__row--heart {
+  position: relative;
+}
 
 .footer-menu__item {
   font-size: 13px;
@@ -1013,22 +1069,30 @@ a {
   font-weight: 700;
 }
 
-.footer-menu__item--bold::before {
-  display: block;
-  float: left;
+.footer-menu__row--heart::before {
+  position: absolute;
+  top: 5px;
+  left: -23px;
   width: 15px;
-  height: 13px;
+  height: 15px;
   background-image: url(../img/heart.svg);
   background-repeat: no-repeat;
   content: "";
-  margin-right: 7px;
-  margin-top: 4px;
+}
+
+.footer-copyright {
+  margin-top: auto;
 }
 
 .footer-copyright__author,
 .footer-copyright__link {
   font-size: 12px;
   font-weight: 400;
+}
+
+.footer-copyright__author {
+  margin: 0;
+  margin-top: 2px;
 }
 
 .modal-feedback {
