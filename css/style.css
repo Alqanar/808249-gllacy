@@ -1032,7 +1032,7 @@ a {
 .paginator__item--next {
   width: 27px;
   height: 26px;
-  background-position: center;
+  background-position: center right;
   text-indent: -10000px;
 }
 
