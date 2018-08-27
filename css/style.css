@@ -1005,14 +1005,85 @@ a {
   background-size: cover;
 }
 
+.paginator {
+  display: flex;
+  margin-left: auto;
+  margin-top: 80px;
+  white-space: nowrap;
+  justify-content: flex-end;
+}
+
+.paginator__item {
+  display: inline-block;
+  width: 27px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.paginator__item a {
+  color: inherit;
+}
+
+.paginator__item--prev,
+.paginator__item--next {
+  width: 27px;
+  height: 26px;
+  background-position: center;
+  text-indent: -10000px;
+}
+
+.paginator__item--prev {
+  background-image: url(../img/icon-right-small.svg);
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.paginator__item--disabled {
+  opacity: 0.2;
+}
+
+.paginator__item--next {
+  background-image: url(../img/icon-right-small.svg);
+  background-repeat: no-repeat;
+}
+
+.paginator__item--active {
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
 .center-area__footer {
   display: flex;
   justify-content: space-between;
   padding-bottom: 26px;
   padding-top: 18px;
+  margin-top: 30px;
 }
 
-.main-footer--separated {  /*Полоса вылезает за отступ*/
+.paginator__item-action:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.paginator__item-action:active {
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.paginator:active .paginator__item--active:not(:active) {
+  color: #ffffff;
+  background-color: initial;
+  border-radius: initial;
+}
+
+.main-footer--separated {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
