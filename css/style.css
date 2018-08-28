@@ -87,15 +87,16 @@ a {
 
 .main-menu__item:hover .main-menu__item-wrapper,
 .main-menu__item:active .main-menu__item-wrapper,
-.main-menu__item:focus .main-menu__item-wrapper {
+.main-menu__item:focus-within .main-menu__item-wrapper {
   color: #000000;
   background-color: #f8f7f4;
   border-radius: 16px;
+  outline: none;
 }
 
 .main-menu__item:hover .main-menu__link,
 .main-menu__item:active .main-menu__link,
-.main-menu__item:focus .main-menu__link {
+.main-menu__item:focus-within .main-menu__link {
   box-shadow: none;
 }
 
@@ -188,8 +189,11 @@ a {
 }
 
 .sub-menu__item-bold:hover,
-.sub-menu__link:hover {
+.sub-menu__link:hover,
+.sub-menu__item-bold:focus,
+.sub-menu__link:focus {
   background-color: #fbded7;
+  outline: none;
 }
 
 .sub-menu__item-bold:active,
@@ -263,26 +267,25 @@ a {
   padding: 6px 8px;
 }
 
-.controls-menu__item--search:hover svg path,
-.controls-menu__item--login:hover svg g,
-.controls-menu__item--basket:hover svg g,
-.controls-menu__item--search:active svg path,
-.controls-menu__item--login:active svg g,
-.controls-menu__item--basket:active svg g {
+.controls-menu__wrapper:hover path,
+.controls-menu__wrapper:hover g,
+.controls-menu__wrapper:active path,
+.controls-menu__wrapper:active g,
+.controls-menu__wrapper:focus-within path,
+.controls-menu__wrapper:focus-within g {
   fill: #000000;
 }
 
-.controls-menu__item:hover {
+.controls-menu__wrapper:hover .controls-menu__item,
+.controls-menu__wrapper:focus-within .controls-menu__item {
   color: #000000;
+  background-color: #f8f7f4;
+  outline: none;
 }
 
 .controls-menu__item:active {
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
-}
-
-.controls-menu__item:hover {
-  background-color: #f8f7f4;
 }
 
 .popup--search {
@@ -328,7 +331,8 @@ a {
   align-items: center;
 }
 
-.orange-button:hover {
+.orange-button:hover,
+.orange-button:focus {
   background-image: 
     -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
   background-image: 
@@ -336,6 +340,7 @@ a {
   background-image: 
     linear-gradient(to top, #ec6f5e, #f58669);
   box-shadow: 0px 1px 2px 0 #ac1000;
+  outline: none;
 }
 
 .orange-button:active {
@@ -467,7 +472,9 @@ a {
 }
 
 .main-menu__item:hover .popup,
-.controls-menu__wrapper:hover .popup {
+.controls-menu__wrapper:hover .popup,
+.main-menu__item:focus-within .popup,
+.controls-menu__wrapper:focus-within .popup {
   display: block;
 }
 
@@ -513,7 +520,8 @@ a {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.orange-button--large:hover {
+.orange-button--large:hover,
+.orange-button--large:focus {
   background-image: 
     -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
   background-image: 
@@ -703,30 +711,28 @@ a {
   position: relative;
   width: 22.8%;
   text-align: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   min-width: 200px;
   max-width: 267px;
   margin-top: 40px;
   flex-grow: 1;
-  margin-right: 2.2%;
+  margin-right: 2.3%;
 }
 
 .ice-cream-list__item:nth-child(4n) {
   margin-right: 0;
 }
 
-/*.ice-cream-list__item:hover {                       / TODO ховер нужно переделывать /
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0px 0px 20px -20px rgba(0, 0, 0, 0.4),
-    20px 0px 20px -20px rgba(0, 0, 0, 0.4),
-    -20px 0px 20px -20px rgba(0, 0, 0, 0.4);
-}*/
+.ice-cream-list__item:hover .ice-cream-list__wrapper,
+.ice-cream-list__item:focus-within .ice-cream-list__wrapper {
+  display: flex;
+}
 
-/*.ice-cream-list__item:hover .ice-cream-list__wrapper-button {     / TODO ховер нужно переделывать /
-  display: block;
-}*/
+.ice-cream-list__item:hover .ice-cream-list__image-wrapper,
+.ice-cream-list__item:hover .ice-cream-list__title,
+.ice-cream-list__item:focus-within .ice-cream-list__image-wrapper,
+.ice-cream-list__item:focus-within .ice-cream-list__title {
+  z-index: 2;
+}
 
 .ice-cream-list__text {
   display: inline;
@@ -739,7 +745,7 @@ a {
 .ice-cream-list__image-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 7px;
 }
 
 .ice-cream-list__icon {
@@ -772,29 +778,28 @@ a {
   font-size: 30px;
 }
 
-.ice-cream-list__wrapper-button {
+.ice-cream-list__wrapper {
   position: absolute;
-  top: 100%;
+  top: -2%;
+  left: -4.85%;
   z-index: 1;
   display: none;
-  width: 100%;
+  width: 109.7%;
+  height: 125.8%;
   background-color: rgba(255, 255, 255, 0.2);
-  padding-top: 18px;
+  border-radius: 5px;
   padding-bottom: 7.2%;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow:
-    20px 0px 20px -20px rgba(0, 0, 0, 0.4),
-    -20px 0px 20px -20px rgba(0, 0, 0, 0.4),
-    0px 20px 20px -20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .ice-cream-list__orange-button {
   display: inline-block;
   width: 100%;
-  line-height: 1;
   max-width: 200px;
-  padding-top: 13px;
+  padding-top: 11px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .features {
