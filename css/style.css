@@ -60,6 +60,7 @@ a {
   display: flex;
   height: 100%;
   margin-top: 14px;
+  flex-wrap: wrap;
 }
 
 .main-menu__link,
@@ -203,7 +204,7 @@ a {
   background-color: #d07058;
 }
 
-.visual-hidden {
+.visual-hidden:not(:focus):not(:active) {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -211,6 +212,8 @@ a {
   margin: -1px;
   padding: 0;
   border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
 }
 
@@ -310,7 +313,6 @@ a {
 
 .orange-button {
   display: inline-flex;
-  height: 44px;
   padding: 0;
   font-size: 18px;
   line-height: 24px;
@@ -320,6 +322,7 @@ a {
   background-image: linear-gradient(to top, #ca3824, #f26843);
   border: none;
   border-radius: 22px;
+  min-height: 44px;
   box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
   font-weight: 700;
   align-items: center;
@@ -671,7 +674,7 @@ a {
 }
 
 .shares__orange-button {
-  padding: 22px 14px;
+  padding: 12px 22px;
   align-self: flex-end;
   margin-top: auto;
   margin-right: 21px;
@@ -1015,25 +1018,21 @@ a {
 
 .paginator__item {
   display: inline-block;
-  width: 27px;
-  height: 26px;
   line-height: 26px;
   text-align: center;
   margin-left: 5px;
   vertical-align: middle;
-  cursor: pointer;
 }
 
-.paginator__item a {
+.paginator__item-link {
+  padding: 4px 8px;
   color: inherit;
 }
 
-.paginator__item--prev,
-.paginator__item--next {
+.paginator__item--prev {
   width: 27px;
   height: 26px;
   background-position: center right;
-  text-indent: -10000px;
 }
 
 .paginator__item--prev {
@@ -1046,23 +1045,23 @@ a {
   opacity: 0.2;
 }
 
-.paginator__item--next {
-  background-image: url(../img/icon-right-small.svg);
-  background-repeat: no-repeat;
-}
-
 .paginator__item--active {
   color: #000000;
   background-color: #ffffff;
   border-radius: 50%;
 }
 
-.center-area__footer {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 26px;
-  padding-top: 18px;
-  margin-top: 30px;
+.paginator__item-next-link {
+  padding: 4px 0 4px 16px;
+}
+
+.paginator__item-next-link:hover path {
+  stroke: #ffffff;
+}
+
+.paginator__item-next-link:active path {
+  stroke: #000000;
+  fill: #000000;
 }
 
 .paginator__item-action:hover {
@@ -1077,10 +1076,18 @@ a {
   border-radius: 50%;
 }
 
-.paginator:active .paginator__item--active:not(:active) {
+.paginator:active .paginator__item--active:not(:active)  {
   color: #ffffff;
   background-color: initial;
   border-radius: initial;
+}
+
+.center-area__footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 26px;
+  padding-top: 18px;
+  margin-top: 30px;
 }
 
 .main-footer--separated {
