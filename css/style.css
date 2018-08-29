@@ -22,7 +22,6 @@ a {
   text-decoration: none;
 }
 
-
 .main-header,
 .main-footer,
 .main-content,
@@ -37,24 +36,27 @@ a {
   display: flex;
   width: 100%;
   background-color: #849d8f;
+  flex-direction: column;
+}
+
+.main-page .site-wrapper {
   background-image: url(../img/slider-1.png);
   background-repeat: no-repeat;
   background-position: top center;
   transition: background-image 0.5s ease, background-color 0.5s ease;
-  flex-direction: column;
 }
 
-.site-wrapper::before,
-.site-wrapper::after {
+.main-page .site-wrapper::before,
+.main-page .site-wrapper::after {
   content: "";
   visibility: hidden;
 }
 
-.site-wrapper::before {
+.main-page .site-wrapper::before {
   background-image: url(../img/slider-2.png);
 }
 
-.site-wrapper::after {
+.main-page .site-wrapper::after {
   background-image: url(../img/slider-3.png)
 }
 
@@ -249,7 +251,8 @@ a {
   margin-top: 14px;
 }
 
-.controls-menu__wrapper {
+.controls-menu__wrapper,
+.controls-menu__wrapper-active {
   position: relative;
   margin-left: 10px;
 }
@@ -433,29 +436,37 @@ a {
   position: absolute;
   top: 37px;
   right: 0;
+  padding-bottom: 21px;
 }
 
 .basket { /*Пока не смогла победить таблицу, она не слушается совсем*/
-  width: 540px;
+  width: 510px;
   font-size: 13px;
-  line-height: 1;
+  line-height: 16px;
   color: #323232;
+  border-bottom: 1px solid #cacac7;
   font-weight: 400;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 11px;
+  padding-bottom: 13px;
 }
 
-.basket td {
-  height: 62px;
-  padding-left: 15px;
-  padding-right: 15px;
+.basket__button {
+  height: 46px;
+  padding-left: 4px;
+  cursor: pointer;
 }
 
-.basket__delete-item {
+.basket__button-item {
+  width: 11px;
+  height: 11px;
   background-color: #f8f7f4;
   background-image: url("../img/cross-small.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   border: none;
-  text-indent: -10000px;
+  cursor: pointer;
 }
 
 .basket__image-item {
@@ -464,12 +475,44 @@ a {
 }
 
 .basket__image-cell {
-  width: 33px;
-  padding-left: 15px;
+  width: 40px;
+  padding-left: 3px;
 }
 
 .basket__name-goods {
-  padding-left: 10px;
+  width: 226px;
+  padding-left: 9px;
+  padding-top: 16px;
+  vertical-align: top;
+}
+
+.basket__weight {
+  padding-left: 28px;
+}
+
+.basket__weight--color {
+  color: #999999;
+}
+
+.basket__price {
+  padding-left: 2px;
+}
+
+.popup-basket__price {
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+  color: #000000;
+  font-weight: 700;
+  margin-right: 15px;
+  margin-top: 14px;
+}
+
+.basket__orange-button {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 15px;
+  margin-left: auto;
 }
 
 .main-header__contacts {
@@ -499,6 +542,12 @@ a {
 .controls-menu__wrapper:hover .popup,
 .controls-menu__wrapper:focus-within .popup {
   display: block;
+}
+
+.controls-menu__wrapper-active:hover .popup,
+.controls-menu__wrapper-active:focus-within .popup {
+  display: flex;
+  flex-direction: column;
 }
 
 .breadcrumbs {
