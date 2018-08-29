@@ -9,14 +9,11 @@ html {
 }
 
 body {
-  display: flex;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   color: #ffffff;
-  background-color: #849d8f;
-  flex-direction: column;
   font-weight: 500;
 }
 
@@ -34,6 +31,31 @@ a {
   margin: 0 auto;
   max-width: 1200px;
   min-width: 900px;
+}
+
+.site-wrapper {
+  display: flex;
+  width: 100%;
+  background-color: #849d8f;
+  background-image: url(../img/slider-1.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+  flex-direction: column;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url(../img/slider-2.png);
+}
+
+.site-wrapper::after {
+  background-image: url(../img/slider-3.png)
 }
 
 .center-area {
@@ -208,7 +230,7 @@ a {
   background-color: #d07058;
 }
 
-.visual-hidden:not(:focus):not(:active) {
+.visual-hidden {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -495,29 +517,42 @@ a {
   font-weight: 700;
 }
 
-.slider__text {
-  font-size: 59px;
-  line-height: 1;
+.slider {
+  position: relative;
   text-align: center;
+  padding-top: 276px;
+}
+
+.slider__slide {
+  display: none;
+}
+
+.slider__text {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 27px;
   font-weight: 700;
-  max-width: 665px;
 }
 
 .orange-button--large {
   display: inline-flex;
   height: 65px;
   padding: 0;
-  padding: 17px 42px 17px 41px;
-  font-size: 32px;
+  padding: 12px 44px;
+  font-size: 31px;
+  line-height: 41px;
   color: #ffffff;
   background-image: -webkit-linear-gradient(bottom, #e74a35, #f26843);
   background-image: -o-linear-gradient(bottom, #e74a35, #f26843);
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 33px;
+  border-radius: 50px;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   font-weight: 700;
   align-items: center;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  cursor: pointer;
 }
 
 .orange-button--large:hover,
@@ -528,20 +563,61 @@ a {
     -o-linear-gradient(bottom, #ec6f5e, #f58669);
   background-image: 
     linear-gradient(to top, #ec6f5e, #f58669);
-   box-shadow: 0px 2px 2px 0 #ac1000;
+   box-shadow: 0px 2px 2px rgba(172, 16, 0, 1);
 }
 
 .orange-button--large:active {
-  background-image: 
-    -webkit-linear-gradient(#e74a35, #f26843),
-    -webkit-linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
-  background-image: 
-    -o-linear-gradient(#e74a35, #f26843),
-    -o-linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
-  background-image:
-    linear-gradient(#e74a35, #f26843),
-    linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
-  box-shadow: inset 0px 2px 2px 0 #942718;
+  background: -webkit-linear-gradient(bottom, #e1613e, #d84732);
+  background: -o-linear-gradient(bottom, #e1613e, #d84732);
+  background: linear-gradient(to top, #e1613e, #d84732);
+  box-shadow: inset 0px 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  z-index: 3;
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/slider-1.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/slider-2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/slider-3.png");
+}
+
+#product-1:checked ~ .site-wrapper .slider__slide--1,
+#product-2:checked ~ .site-wrapper .slider__slide--2,
+#product-3:checked ~ .site-wrapper .slider__slide--3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+  background-color: #ffffff;
 }
 
 .filters__first-row,
@@ -649,11 +725,14 @@ a {
   box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
-
 .shares,
 .banner-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.shares {
+  margin-top: 40px;
 }
 
 .banner {
