@@ -290,11 +290,11 @@ a {
 }
 
 .controls-menu__wrapper:hover path,
-.controls-menu__wrapper:hover g,
-.controls-menu__wrapper:active path,
-.controls-menu__wrapper:active g,
 .controls-menu__wrapper:focus-within path,
-.controls-menu__wrapper:focus-within g {
+.controls-menu__wrapper:active path,
+.controls-menu__wrapper:hover g,
+.controls-menu__wrapper:focus-within g,
+.controls-menu__wrapper:active g {
   fill: #000000;
 }
 
@@ -409,6 +409,7 @@ a {
 }
 
 .popup-login__link:hover,
+.popup-login__link:focus,
 .popup-login__link:active {
   color: #e84d37;
   box-shadow: 0 0.5px 0 0 rgba(232, 77, 55, 0.5)
@@ -494,8 +495,8 @@ a {
 }
 
 .main-menu__item:hover .popup,
-.controls-menu__wrapper:hover .popup,
 .main-menu__item:focus-within .popup,
+.controls-menu__wrapper:hover .popup,
 .controls-menu__wrapper:focus-within .popup {
   display: block;
 }
@@ -973,8 +974,10 @@ a {
 }
 
 .new-in-blog__link:hover,
+.new-in-blog__link:focus,
 .new-in-blog__link:active {
   color: #e84d37;
+  outline: none;
 }
 
 .new-in-blog__link p {
@@ -1139,7 +1142,8 @@ a {
   padding: 4px 0 4px 16px;
 }
 
-.paginator__item-next-link:hover path {
+.paginator__item-next-link:hover path,
+.paginator__item-next-link:focus path {
   stroke: #ffffff;
 }
 
@@ -1148,10 +1152,12 @@ a {
   fill: #000000;
 }
 
-.paginator__item-action:hover {
+.paginator__item-action:hover,
+.paginator__item-action:focus-within {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+  outline: none;
 }
 
 .paginator__item-action:active {
@@ -1195,8 +1201,10 @@ a {
   text-indent: -10000px;
 }
 
-.main-footer__social-button:hover {
+.main-footer__social-button:hover,
+.main-footer__social-button:focus {
   opacity: 1;
+  outline: none;
 }
 
 .main-footer__social-button:active {
@@ -1246,14 +1254,17 @@ a {
 }
 
 .footer-menu__item:hover,
+.footer-menu__item:focus,
 .footer-menu__item:active,
 .footer-copyright__link:hover,
+.footer-copyright__link:focus,
 .footer-copyright__link:active,
 .breadcrumbs__item-link:hover,
+.breadcrumbs__item-link:focus,
 .breadcrumbs__item-link:active {
   color: #ffbc9e;
   box-shadow: 0 0.5px 0 0 rgba(255, 188, 158, 0.5);
-
+  outline: none;
 }
 
 .footer-menu__item--bold {
