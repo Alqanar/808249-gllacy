@@ -72,6 +72,7 @@ a {
 
 .logo {
   margin-right: 10px;
+  margin-left: 1px;
 }
 
 .same-list {
@@ -107,6 +108,7 @@ a {
 .main-menu__item-wrapper {
   display: block;
   padding: 7px 13px;
+  margin-right: 2px;
 }
 
 .main-menu__item:hover .main-menu__item-wrapper,
@@ -273,7 +275,8 @@ a {
   height: 44px;
   border: solid 1px #d3d3d2;
   border-radius: 5px;
-  padding-left: 15px;
+  padding-left: 13px;
+  padding-bottom: 4px;
 }
 
 .popup_form-field:hover,
@@ -296,7 +299,7 @@ a {
 }
 
 .controls-menu__image-loupe {
-  padding: 6px 8px;
+  padding: 7px 8px 4px 8px;
 }
 
 .controls-menu__wrapper:hover path,
@@ -329,7 +332,7 @@ a {
 }
 
 .controls-menu__item--login {
-  padding: 5px 17px 4px 16px;
+  padding: 5px 17px 3px 16px;
 
 }
 
@@ -427,7 +430,7 @@ a {
 }
 
 .controls-menu__item--basket {
-  padding: 4px 16px 3px 16px;
+  padding: 4px 16px 2px 16px;
 }
 
 .controls-menu__item-basket--active {
@@ -527,9 +530,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-top: -4px;
 }
 
-.main-header__contacts p {
+.main-header__work-time,
+.main-header__telephon {
   margin: 0;
 }
 
@@ -543,6 +548,7 @@ a {
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
+  margin-top: 4px;
 }
 
 .main-menu__item:hover .popup,
@@ -597,10 +603,9 @@ a {
 .orange-button--large {
   display: inline-flex;
   height: 65px;
-  padding: 0;
-  padding: 12px 44px;
-  font-size: 31px;
-  line-height: 41px;
+  padding: 9px 40px 12px 41px;
+  font-size: 32px;
+  line-height: 44px;
   color: #ffffff;
   background-image: -webkit-linear-gradient(bottom, #e74a35, #f26843);
   background-image: -o-linear-gradient(bottom, #e74a35, #f26843);
@@ -611,6 +616,7 @@ a {
   align-items: center;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   cursor: pointer;
+  margin-top: 2px;
 }
 
 .orange-button--large:hover,
@@ -633,19 +639,19 @@ a {
 
 .slider__controls {
   position: absolute;
-  bottom: 32px;
-  left: 0;
+  bottom: 24px;
+  left: 2px;
   z-index: 3;
   font-size: 0;
 }
 
 .slider__point {
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 9px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -1008,39 +1014,40 @@ a {
 
 .shares {
   margin-top: 40px;
+  min-height: 229px;
 }
 
 .banner {
   display: flex;
+  padding: 16px 19px;
   border-radius: 15px;
   flex-direction: column;
-  min-height: 229px;
   min-width: 420px;
   max-width: 560px;
   flex: 1 1 50%;
 }
 
 .shares__caption {
-  margin: 23px 0 22px 20px;
+  margin: 0;
   font-size: 35px;
-  line-height: 1;
+  line-height: 41px;
   font-weight: 700;
 }
 
 .shares__text {
   margin: 0;
   font-size: 18px;
+  line-height: 22px;
   font-weight: 700;
-  margin-left: 20px;
-  margin-right: 25px;
+  margin-top: 15px;
 }
 
 .shares__orange-button {
-  padding: 12px 22px;
+  padding: 10px 22px 12px 21px;
   align-self: flex-end;
   margin-top: auto;
-  margin-right: 21px;
-  margin-bottom: 23px;
+  margin-right: 2px;
+  margin-bottom: 7px;
 }
 
 .shares__raspberry {
@@ -1107,7 +1114,7 @@ a {
 .ice-cream-list__image-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
 }
 
 .ice-cream-list__icon {
@@ -1128,17 +1135,28 @@ a {
 
 .ice-cream-list__price {
   position: absolute;
-  bottom: 5%;
+  bottom: 4.6%;
   margin: 0;
   font-size: 45px;
+  line-height: 45px;
   font-weight: 700;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
-  letter-spacing: 1px;
 }
 
-.ice-cream-list__price span {
-  font-size: 30px;
+.ice-cream-list__price--units {
+  width: 31px;
+  height: 36px;
+  background-image: url(../img/ruble.svg);
+  background-repeat: no-repeat;
+  background-position: 4px 11px;
 }
+
+.ice-cream-list__price--units span{
+  font-size: 30px;
+  line-height: 45px;
+  padding-left: 36px;
+}
+
 
 .ice-cream-list__wrapper {
   position: absolute;
@@ -1165,29 +1183,41 @@ a {
 }
 
 .features {
-  padding: 21px 29px;
+  padding: 25px 16px 15px 20px;
   color: #323232;
   background-color: #f0e6ce;
   background-image: url(../img/wafer-pattern.jpg);
   background-repeat: repeat;
   border-radius: 15px;
-  margin-top: 40px;
+  margin-top: 38px;
 }
 
 .features__about-us {
   margin: 0;
   font-size: 24px;
+  line-height: 30px;
   text-align: left;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
 }
 
 .features__item {
   display: inline-flex;
   width: 49%;
+  line-height: 22px;
   font-weight: 400;
   vertical-align: text-top;
-  margin-bottom: 16px;
+  margin-bottom: 9px;
+  margin-left: 1px;
+}
+
+.features__item:nth-child(2n) {
+  margin-left: 17px;
+}
+
+.features__item:nth-child(2n) .features__text {
+  margin-left: 8px;
 }
 
 .features__ice-cream,
@@ -1224,7 +1254,7 @@ a {
   display: inline-block;
   margin: 0;
   margin-left: 7px;
-  margin-top: 16px;
+  margin-top: 13px;
   max-width: 90%;
 }
 
@@ -1232,27 +1262,34 @@ a {
   margin-top: 40px;
 }
 
+.new-in-blog,
+.subscription {
+  min-height: 220px;
+}
+
 .new-in-blog {
-  padding: 26px 20px;
+  padding: 23px 20px;
   background-color: #ffffff;
   background-image: url(../img/blog-background.jpg);
   background-repeat: no-repeat;
-  background-position: 17% 40%; /*Катя, подскажи, пожалуйста, как можно сделать, чтобы фон складывался не справа налево, а слева направо (чтобы при уменьшении размера у нас уменьшался белый цвет, а не картинка)*/
+  background-position: 17% 39%; /*Катя, подскажи, пожалуйста, как можно сделать, чтобы фон складывался не справа налево, а слева направо (чтобы при уменьшении размера у нас уменьшался белый цвет, а не картинка)*/
 }
 
 .new-in-blog__title {
   margin: 0;
   font-size: 16px;
+  line-height: 22px;
   color: #323232;
-  margin-bottom: 13px;
 }
 
 .new-in-blog__link {
-  width: 279px;
+  width: 281px;
   font-size: 24px;
+  line-height: 30px;
   color: #323232;
   text-decoration: underline;
   font-weight: 700;
+  margin-top: 4px;
 }
 
 .new-in-blog__link:hover,
@@ -1268,7 +1305,8 @@ a {
 }
 
 .subscription { 
-  padding: 34px 21px;
+  padding: 29px 21px 33px;
+  line-height: 22px;
   color: #5a5a5a;
   background-color: #f8f7f4;
   border: 5px solid transparent;
@@ -1297,6 +1335,7 @@ a {
 .modal-feedback__popup_form-field::placeholder,
 .modal-feedback__textarea::placeholder {
   font-size: 16px;
+  line-height: 24px;
   color: #999999;
   font-weight: 400;
 }
@@ -1309,8 +1348,8 @@ a {
 }
 
 .subscription__orange-button {
-  padding: 14px 19px;
-  line-height: 1;
+  padding: 9px 19px 12px 19px;
+  margin-bottom: 1px;
 }
 
 .contacts {
@@ -1324,7 +1363,7 @@ a {
 .contacts__adress {
   position: absolute;
   top: 63px;
-  right: 3%;
+  right: 2.2%;
   display: flex;
   width: 302px;
   color: #323232;
@@ -1335,42 +1374,43 @@ a {
 }
 
 .contacts__text-adress {
-  padding: 25px 32px 2px 26px;
+  padding: 10px 32px 2px 25px;
 }
 
 .contacts__text {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
-  margin-bottom: 23px;
+  margin-top: 18px;
 }
 
 .contacts__bold {
   font-size: 18px;
+  line-height: 24px;
   font-weight: 700;
 }
 
 .contacts__bold__adress {
   display: inline-flex;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 .contacts__bold__telephone {
   display: inline-flex;
-  margin-top: 7px;
-  margin-bottom: 6px;
+  margin-top: 4px;
+  margin-bottom: 2px;
 }
 
 .contacts__orange-button {
-  margin: auto;
+  margin: 22px auto 0;
   padding: 13px 28px;
   line-height: 1;
-  margin-top: 15px;
 }
 
 .contacts__map {
   width: 100%;
-  height: 430px;
+  height: 429px;
   background-image: url(../img/map.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1465,7 +1505,6 @@ a {
   justify-content: space-between;
   padding-bottom: 26px;
   padding-top: 18px;
-  margin-top: 30px;
 }
 
 .main-footer--separated {
@@ -1475,7 +1514,8 @@ a {
 .main-footer__social {
   display: flex;
   margin-top: auto;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  margin-left: 2px;
 }
 
 .main-footer__social-button {
@@ -1521,15 +1561,19 @@ a {
 
 .footer-menu {
   margin-top: auto;
-  margin-bottom: 4px;
 }
 
 .footer-menu__navigation {
   display: flex;
 }
 
+.footer-menu__navigation li {
+  margin-bottom: 3px;
+}
+
 .main-footer__column-wrapper {
-  margin-right: 32px;
+  margin-right: 19px;
+  padding-left: 13px;
 }
 
 .footer-menu__row--heart {
@@ -1538,6 +1582,7 @@ a {
 
 .footer-menu__item {
   font-size: 13px;
+  line-height: 18px;
   font-weight: 400;
 }
 
@@ -1561,8 +1606,8 @@ a {
 
 .footer-menu__row--heart::before {
   position: absolute;
-  top: 5px;
-  left: -23px;
+  top: 4px;
+  left: -22px;
   width: 15px;
   height: 15px;
   background-image: url(../img/heart.svg);
