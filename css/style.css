@@ -569,6 +569,7 @@ a {
   font-size: 14px;
   line-height: 11px;
   font-weight: 400;
+  margin-top: -16px;
 }
 
 .breadcrumbs_symbol {
@@ -577,8 +578,11 @@ a {
 }
 
 .content-catalog__title {
+  margin: 0;
   font-size: 35px;
+  line-height: 41px;
   font-weight: 700;
+  margin-top: 7px;
 }
 
 .slider {
@@ -687,6 +691,10 @@ a {
   background-color: #ffffff;
 }
 
+.filters {
+  margin-top: 23px;
+}
+
 .filters__first-row,
 .filters__second-row {
   display: flex;
@@ -701,7 +709,7 @@ a {
 
 .filters__range,
 .filters__radio {
-  margin-left: 14px;
+  margin-left: 15px;
 }
 
 .fat-content,
@@ -714,7 +722,7 @@ a {
 .filters__field,
 .range__controls,
 .filters__button {
-  height: 37px;
+  height: 36px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
@@ -746,11 +754,12 @@ a {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  padding-left: 16px;
+  padding-left: 15px;
   cursor: pointer;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  margin-left: 1px;
 }
 
 .filters__block--sorting::-ms-expand {
@@ -782,7 +791,7 @@ a {
 }
 
 .range__price-controls {
-  margin-left: 16px;
+  margin-left: 14px;
 }
 
 .filters__label {
@@ -853,20 +862,23 @@ a {
 
 .filters__field-radio {
   width: 415px;
-  justify-content: space-between;
+  padding-left: 14px;
+  padding-right: 16px;
 }
 
 .filters__field-radio,
 .filters__field-checkbox {
   display: flex;
   align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .filters__radio-wrapper-item {
   position: relative;
   cursor: pointer;
+}
+
+.filters__radio-wrapper-item:not(:first-child) {
+  margin-left: 18px;
 }
 
 .filters__radio-label,
@@ -876,7 +888,7 @@ a {
 }
 
 .filters__radio-label {
-  padding-left: 29px;
+  padding-left: 32px;
 }
 
 .filters__radio-label::before {
@@ -915,10 +927,6 @@ a {
 
 .fat-content__radio-item:disabled + .filters__radio-label::after {
   background-color: rgba(255, 255, 255, 0.4);
-}
-
-.filters__checkbox-wrapper-item:not(:first-child) {
-  padding-left: 56px;
 }
 
 .filters__checkbox-wrapper-item:first-child {
@@ -967,11 +975,14 @@ a {
 }
 
 .filters__second-row {
-  margin-top: 18px;
+  margin-top: 13px;
 }
 
 .filters__field-checkbox {
   width: 703px;
+  padding-left: 17px;
+  padding-right: 18px;
+  justify-content: space-between;
 }
 
 .filters__field-checkbox label {
