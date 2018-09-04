@@ -66,7 +66,7 @@
                 <section class="popup popup--shadow popup--search">
                   <form action="https://echo.htmlacademy.ru" method="get">
                     <label class="visual-hidden" for="field-search">Поиск по сайту</label>
-                    <input class="popup_form-field controls-menu__field" id="field-search" type="search" name="search" placeholder="Что ищем?">
+                    <input class="popup_form-field controls-menu__field" id="field-search" type="search" name="search" placeholder="Что ищем?" autofocus>
                   </form>
                 </section>
               </li>
@@ -87,11 +87,11 @@
                   <form action="https://echo.htmlacademy.ru" method="post">
                     <p class="popup__row">
                       <label class="visual-hidden" for="user-login">Электронная почта</label>
-                      <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта">
+                      <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта" autofocus required>
                     </p>
                     <p class="popup__row">
                       <label class="visual-hidden" for="user-password">Пароль</label>
-                      <input class="popup_form-field controls-menu__field" id="user-password" type="password" name="password" placeholder="Пароль">
+                      <input class="popup_form-field controls-menu__field" id="user-password" type="password" name="password" placeholder="Пароль" required>
                     </p>
                     <div class="popup-login__footer">
                       <button class="orange-button orange-button__popup-login" type="submit">Войти</button>
@@ -278,7 +278,7 @@
                 (с 10 до 20 ежедневно)
             </p>
             </div>
-            <button class="orange-button contacts__orange-button" type="submit" value="Вызввать окно обратной связи">Форма обратной связи</button>
+            <button class="orange-button contacts__orange-button" type="button">Форма обратной связи</button>
           </div>
         </section> <!-- End Map -->
       </main>
@@ -343,14 +343,14 @@
         </p>
         <p class="popup__modal-feedback-row">
           <label class="visual-hidden" for="modal-feedback__e-mail">Текст вашего вопроса или предложения</label>
-          <textarea class="modal-feedback__textarea" id="modal-feedback__feedback" name="feedback" rows="6" placeholder="Напишите что-нибудь"></textarea>
+          <textarea class="modal-feedback__textarea" id="modal-feedback__feedback" name="feedback" rows="6" placeholder="Напишите что-нибудь..."></textarea>
         </p>
         <button class="orange-button modal-feedback__orange-button" type="submit">Отправить</button>
       </form>
       <button class="modal-feedback__close" type="button">Закрыть</button>
     </section>
     <div class="modal-overlay"></div>
-    <!-- <script src="js/script.js" type="text/javascript"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> --> <!-- временно закомменчено -->
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </body>
 </html>

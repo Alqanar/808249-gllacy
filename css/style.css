@@ -117,6 +117,8 @@ a {
   color: #000000;
   background-color: #f8f7f4;
   border-radius: 16px;
+  transition-duration: 0.3s;
+  transition-property: color, background-color;
   outline: none;
 }
 
@@ -133,6 +135,23 @@ a {
 
 .main-menu__item {
   position: relative;
+}
+
+@keyframes emergence-popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sub-menu,
+.popup--search,
+.popup-login,
+.popup-basket {
+  animation-name: emergence-popup;
+  animation-duration: 0.4s;
 }
 
 .sub-menu {
@@ -152,6 +171,8 @@ a {
 .popup {
   z-index: 2;
   display: none;
+  background-color: #f8f7f4;
+  border-radius: 5px;
 }
 
 .main-menu__item--active {
@@ -161,11 +182,6 @@ a {
 
 .main-menu__link--active {
   box-shadow: none;
-}
-
-.popup {
-  background-color: #f8f7f4;
-  border-radius: 5px;
 }
 
 .popup--shadow {
@@ -216,6 +232,8 @@ a {
 .sub-menu__item-bold:focus,
 .sub-menu__link:focus {
   background-color: #fbded7;
+  transition-duration: 0.1s;
+  transition-property: background-color;
   outline: none;
 }
 
@@ -304,6 +322,8 @@ a {
 .controls-menu__wrapper:hover g,
 .controls-menu__wrapper:focus-within g,
 .controls-menu__wrapper:active g {
+  transition-duration: 0.4s;
+  transition-property: fill;
   fill: #000000;
 }
 
@@ -311,7 +331,9 @@ a {
 .controls-menu__wrapper:focus-within .controls-menu__item {
   color: #000000;
   background-color: #f8f7f4;
-  outline: none;
+  transition-duration: 0.4s;
+  transition-property: color, background-color;
+  outline: none
 }
 
 .controls-menu__item:active {
@@ -351,8 +373,6 @@ a {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-  background-image: -webkit-linear-gradient(bottom, #ca3824, #f26843);
-  background-image: -o-linear-gradient(bottom, #ca3824, #f26843);
   background-image: linear-gradient(to top, #ca3824, #f26843);
   border: none;
   border-radius: 22px;
@@ -365,26 +385,15 @@ a {
 
 .orange-button:hover,
 .orange-button:focus {
-  background-image: 
-    -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
-  background-image: 
-    -o-linear-gradient(bottom, #ec6f5e, #f58669);
-  background-image: 
-    linear-gradient(to top, #ec6f5e, #f58669);
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
   box-shadow: 0px 1px 2px 0 #ac1000;
   outline: none;
 }
 
 .orange-button:active {
   background-image: 
-    -webkit-linear-gradient(#e74a35, #f26843),
-    -webkit-linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
-  background-image: 
-    -o-linear-gradient(#e74a35, #f26843),
-    -o-linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
-  background-image: 
     linear-gradient(#e74a35, #f26843),
-    linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));;
+    linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
   box-shadow: inset 0px 2px 2px 0 #942718;
 }
 
@@ -614,8 +623,6 @@ a {
   font-size: 32px;
   line-height: 44px;
   color: #ffffff;
-  background-image: -webkit-linear-gradient(bottom, #e74a35, #f26843);
-  background-image: -o-linear-gradient(bottom, #e74a35, #f26843);
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 50px;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
@@ -629,17 +636,11 @@ a {
 .orange-button--large:hover,
 .orange-button--large:focus {
   background-image: 
-    -webkit-linear-gradient(bottom, #ec6f5e, #f58669);
-  background-image: 
-    -o-linear-gradient(bottom, #ec6f5e, #f58669);
-  background-image: 
     linear-gradient(to top, #ec6f5e, #f58669);
    box-shadow: 0px 2px 2px rgba(172, 16, 0, 1);
 }
 
 .orange-button--large:active {
-  background: -webkit-linear-gradient(bottom, #e1613e, #d84732);
-  background: -o-linear-gradient(bottom, #e1613e, #d84732);
   background: linear-gradient(to top, #e1613e, #d84732);
   box-shadow: inset 0px 2px 2px rgba(172, 16, 0, 1);
 }
@@ -759,8 +760,6 @@ a {
   font-weight: 500;
   padding-left: 15px;
   cursor: pointer;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   margin-left: 1px;
 }
@@ -1642,6 +1641,15 @@ a {
   margin-top: 2px;
 }
 
+@keyframes increase {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .modal-feedback {
   position: fixed;
   top: 338px;
@@ -1651,6 +1659,12 @@ a {
   padding: 16px 20px 27px 24px;
   border-radius: 10px;
   margin-left: -237px;
+}
+
+.modal-feedback--show {
+  display: block;
+  animation-name: increase;
+  animation-duration: 0.4s;
 }
 
 .modal-feedback__close {
@@ -1724,6 +1738,15 @@ a {
   margin-right: 4px;
 }
 
+@keyframes blackout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1732,5 +1755,12 @@ a {
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+
+.modal-overlay--show {
+  display: block;
+  animation-name: blackout;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
 }

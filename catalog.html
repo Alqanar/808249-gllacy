@@ -63,7 +63,7 @@
                 <section class="popup popup--shadow popup--search">
                   <form action="https://echo.htmlacademy.ru" method="get">
                     <label class="visual-hidden" for="field-search">Поиск по сайту</label>
-                    <input class="popup_form-field controls-menu__field" id="field-search" type="search" name="search" placeholder="Что ищем?">
+                    <input class="popup_form-field controls-menu__field" id="field-search" type="search" name="search" placeholder="Что ищем?" autofocus>
                   </form>
                 </section>
               </li class="controls-menu__wrapper">
@@ -84,11 +84,11 @@
                   <form action="https://echo.htmlacademy.ru" method="post">
                     <p class="popup__row">
                       <label class="visual-hidden" for="user-login">Электронная почта</label>
-                      <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта">
+                      <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта" autofocus required>
                     </p>
                     <p class="popup__row">
                       <label class="visual-hidden" for="user-password">Пароль</label>
-                      <input class="popup_form-field controls-menu__field" id="user-password" type="password" name="password" placeholder="Пароль">
+                      <input class="popup_form-field controls-menu__field" id="user-password" type="password" name="password" placeholder="Пароль" required>
                     </p>
                     <div class="popup-login__footer">
                       <button class="orange-button orange-button__popup-login" type="submit">Войти</button>
