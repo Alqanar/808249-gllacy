@@ -255,10 +255,6 @@ a {
   color: #999999;
 }
 
-.controls-menu__field::-moz-placeholder {
-  vertical-align: middle;
-}
-
 .controls-menu__field::placeholder {
   font-size: 14px;
   line-height: 24px;
@@ -1647,6 +1643,14 @@ a {
   line-height: 24px;
   color: #999999;
   font-weight: 400;
+}
+
+@-moz-document url-prefix() {
+  .subscription_form-wrapper input::placeholder,
+  .modal-feedback__popup_form-field::placeholder,
+  .controls-menu__field::placeholder {
+    line-height: 38px;
+  }
 }
 
 .subscription__row {

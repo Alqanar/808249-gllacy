@@ -32,18 +32,38 @@ modalClose.addEventListener("click", function (evt) {
   overlay.classList.remove("modal-overlay--show");
 });
 
+/*ловим клик (событие) по overlay*/
+overlay.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalFeedback.classList.remove("modal-feedback--show");
+  overlay.classList.remove("modal-overlay--show");
+});
+
+/*добавляем обработчик события, который будет отлавливать нажатие кнопки ESC и в случае, если модальное окно открыто, закрывать его.*/
+window.addEventListener("keydown", function (evt) {
+  /*если нажали на кнопку с кодом 27 (код кнопки escape 27)*/
+  if (evt.keyCode === 27) {
+    /*отменяем стандартное действие при нажатии на escape*/
+    evt.preventDefault();
+    /*если modalFeedback содержит (contains) класс modal-feedback--show, то удаляет его у него и у overlay*/
+    if (modalFeedback.classList.contains("modal-feedback--show")) {
+      modalFeedback.classList.remove("modal-feedback--show");
+      overlay.classList.remove("modal-overlay--show");
+    }
+  }
+});
 
 
-document.addEventListener('DOMContentLoaded', function(evt) {
+document.addEventListener("DOMContentLoaded", function(evt) {
   ymaps.ready(init);
-  function init(){ 
-    var myMap = new ymaps.Map('map', {
+  function init() { 
+    var myMap = new ymaps.Map("map", {
       center: [59.93858261303607,30.326133675949112],
       zoom: 17,
       controls: []
     });
     var myPlacemark = new ymaps.Placemark([59.93863106417265,30.3230545], {
-      hintContent: 'Gllacy-shop',
+      hintContent: "Gllacy-shop",
     });
     myMap.geoObjects.add(myPlacemark);
   }
