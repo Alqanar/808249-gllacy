@@ -237,30 +237,6 @@ a {
   margin-top: 20px;
 }
 
-.controls-menu__field::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: 24px;
-  color: #999999;
-}
-
-.controls-menu__field:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 24px;
-  color: #999999;
-}
-
-.controls-menu__field::-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 24px;
-  color: #999999;
-}
-
-.controls-menu__field::placeholder {
-  font-size: 14px;
-  line-height: 24px;
-  color: #999999;
-}
-
 .sub-menu__row {
   margin-top: 3px;
 }
@@ -332,6 +308,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-top: 14px;
 }
@@ -354,6 +331,30 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.controls-menu__field::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.controls-menu__field:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.controls-menu__field::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.controls-menu__field::placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
 }
 
 .popup_form-field {
@@ -646,7 +647,7 @@ a {
   padding-left: 16px;
   padding-right: 15px;
   margin-right: 13px;
-  margin-left: auto;
+  margin-left: 353.5px;
 }
 
 .main-header__contacts {
@@ -857,6 +858,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-start;
 }
 
 .filters__select,
@@ -886,15 +888,16 @@ a {
 .filters__field,
 .range__controls,
 .filters__button {
-  height: 36px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 18px;
+  min-height: 36px;
   margin-top: 6px;
 }
 
 .filters__select {
+  margin-top: 3px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -1033,7 +1036,6 @@ a {
 }
 
 .filters__field-radio {
-  width: 415px;
   padding-left: 14px;
   padding-right: 16px;
 }
@@ -1046,10 +1048,12 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  flex-wrap: wrap;
 }
 
 .filters__radio-wrapper-item {
   position: relative;
+  margin: 8px 0;
   cursor: pointer;
 }
 
@@ -1136,6 +1140,11 @@ a {
   content: "";
 }
 
+.filters__checkbox-wrapper-item {
+  margin: 8px 0;
+  padding-left: 34px;
+}
+
 .filters__checkbox-wrapper-item:hover > .filler__checkbox-item:not(:checked):not(:disabled) + .filters__checkbox-label::before,
 .filters__checkbox-wrapper-item:hover > .filler__checkbox-item:checked:not(:disabled) + .filters__checkbox-label::after {
   opacity: 1;
@@ -1161,7 +1170,7 @@ a {
 }
 
 .filters__field-checkbox {
-  width: 703px;
+  min-width: 703px;
   padding-left: 17px;
   padding-right: 18px;
   -webkit-box-pack: justify;
@@ -1189,6 +1198,7 @@ a {
   border: 2px solid #ffffff;
   margin-left: 14px;
   margin-top: auto;
+  flex-shrink: 0;
 }
 
 .filters__button:hover {
@@ -1391,7 +1401,10 @@ a {
 
 .ice-cream-list__ice-cream-image {
   width: 100%;
+  height: auto;
   border-radius: 50%;
+  max-height: 267px;
+  min-height: 199px;
 }
 
 .ice-cream-list__price {
