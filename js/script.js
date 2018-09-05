@@ -7,7 +7,12 @@ var modalClose = modalFeedback.querySelector(".modal-feedback__close");
 /*кроме модального окна по кнопке buttonConacts у нас должен появляться overlay, находим его в HTML и задаем переменную*/
 var overlay = document.querySelector(".modal-overlay");
 /*сделаем так, чтобы при открытии формы фокус автоматически устанавливался в поле имени, находим это поле и задаем переменную*/
-var modalName = modalFeedback.querySelector("#modal-feedback__user-name");
+var modalFormName = modalFeedback.querySelector("#modal-feedback__user-name");
+/*нахдим форму в модальном окне и записываем ее в переменную*/
+var modalForm = modalFeedback.querySelector(".modal-feedback__form");
+/*при валидации формы будем проверять на заполняемость всех полей, поэтоу находим оставшиеся два поля и записываем их в переменные*/
+var modalFormEmail = modalFeedback.querySelector("#modal-feedback__e-mail");
+var modalFormFeedback = modalFeedback.querySelector("#modal-feedback__feedback");
 
 
 /*ловим клик (событие) по кнопке открытия модального окна, которую мы записали ранее в переменную buttonConacts*/
@@ -19,7 +24,7 @@ buttonConacts.addEventListener("click", function (evt) {
   /*с помощью метода classList.add добавляем класс с display: block к overlay по клику на кнопку открытия*/
   overlay.classList.add("modal-overlay--show");
   /*cтавим фокус в поле ввода имени при открытии модального окна.*/
-  modalName.focus();
+  modalFormName.focus();
 });
 
 /*ловим клик (событие) по кнопке закрытия модального окна, которую мы записали ранее в переменную modalClose*/
@@ -30,6 +35,8 @@ modalClose.addEventListener("click", function (evt) {
   modalFeedback.classList.remove("modal-feedback--show");
   /*с помощью метода classList.remove удаляем по клику на кнопку закрытия добавленный ранее класс к overlay*/
   overlay.classList.remove("modal-overlay--show");
+  /*удаляем modal-error*/
+  modalFeedback.classList.remove("modal-error");
 });
 
 /*ловим клик (событие) по overlay*/
@@ -37,6 +44,7 @@ overlay.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalFeedback.classList.remove("modal-feedback--show");
   overlay.classList.remove("modal-overlay--show");
+  modalFeedback.classList.remove("modal-error");
 });
 
 /*добавляем обработчик события, который будет отлавливать нажатие кнопки ESC и в случае, если модальное окно открыто, закрывать его.*/
@@ -45,14 +53,28 @@ window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     /*отменяем стандартное действие при нажатии на escape*/
     evt.preventDefault();
-    /*если modalFeedback содержит (contains) класс modal-feedback--show, то удаляет его у него и у overlay*/
+    /*если modalFeedback содержит (contains) класс modal-feedback--show, то удаляет его у него и у overlay, а также удаляем modal-error*/
     if (modalFeedback.classList.contains("modal-feedback--show")) {
       modalFeedback.classList.remove("modal-feedback--show");
       overlay.classList.remove("modal-overlay--show");
+      modalFeedback.classList.remove("modal-error");
     }
   }
 });
 
+/*добавим валидацию формы*/
+modalForm.addEventListener("submit", function (evt) {
+  /*отменим отправку формы, если какое-то из полей незаполнено.*/
+  if (!modalFormName.value || !modalFormEmail.value || !modalFormFeedback.value) {
+    /*ловим событие отправки формы и отменяем стандартное действие*/
+    evt.preventDefault();
+    modalFeedback.classList.remove("modal-error");
+    /*сброс анимации. "Что делает эта дополнительная строка кода, попросите браузер предоставить вам информацию о dom. Но для того, чтобы узнать, что такое offsetWidth, браузер должен отказаться от своего плана пакетной обработки изменений и выполнить оплату страницы прямо сейчас. В текущем состоянии нет класса run-animation, который является изменением, и поэтому анимация получает сброс. И позже, когда функция завершится, он снова выполнит вычисления и увидит, что вы сделали еще одно изменение относительно того, когда оно предоставило вам offsetWidth, поэтому оно тоже применяется."*/
+    modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+    /*если форма не валидна, добавим модальному окну класс ошибки*/
+    modalFeedback.classList.add("modal-error");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function(evt) {
   ymaps.ready(init);
