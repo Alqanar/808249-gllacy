@@ -26,7 +26,7 @@ a {
 
 .main-header,
 .main-footer,
-.center-area,
+.main-content--width,
 .content-catalog {
   width: 100%;
   margin: 0 auto;
@@ -1688,6 +1688,17 @@ a {
   position: relative;
   min-width: 900px;
   margin-top: 40px;
+}
+
+.contacts__wrapper-adress {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 100%;
+  height: 429px;
+  transform: translateX(50%);
+  min-width: 900px;
+  max-width: 1200px;
 }
 
 .contacts__adress {
