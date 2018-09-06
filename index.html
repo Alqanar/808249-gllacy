@@ -21,7 +21,7 @@
             <nav class="main-menu">
               <ul class="same-list main-menu__navigation">
                 <li class="main-menu__item">
-                  <a class="main-menu__item-wrapper"href="#">
+                  <a class="main-menu__item-wrapper" href="#">
                     <p class="main-menu__link">Каталог</p>
                   </a>
                   <ul class="same-list popup popup--shadow sub-menu">
@@ -86,8 +86,8 @@
                   <h2 class="visual-hidden">Форма входа</h2>
                   <form action="https://echo.htmlacademy.ru" method="post">
                     <p class="popup__row">
-                      <label class="visual-hidden" for="user-login">Электронная почта</label>
-                      <input class="popup_form-field controls-menu__field" id="user-login" type="email" name="login" placeholder="Электронная почта" required>
+                      <label class="visual-hidden" for="popup-login__user-login">Электронная почта</label>
+                      <input class="popup_form-field controls-menu__field" id="popup-login__user-login" type="email" name="login" placeholder="Электронная почта" required>
                     </p>
                     <p class="popup__row">
                       <label class="visual-hidden" for="user-password">Пароль</label>
@@ -304,22 +304,18 @@
           </ul>
           <nav class="footer-menu">
             <ul class="same-list footer-menu__navigation">
-              <div class="main-footer__column-wrapper">
-                <li class="footer-menu__row--heart">
-                  <a class="footer-menu__item footer-menu__item--bold" href="#">Для поставщиков</a>
-                </li>
-                <li>
-                  <a class="footer-menu__item" href="#">О производстве</a>
-                </li>
-              </div>
-              <div div class="main-footer__column-wrapper">
-                <li>
-                  <a class="footer-menu__item" href="#">Наши документы</a>
-                </li>
-                <li>
-                  <a class="footer-menu__item" href="#">Экологические стандарты</a>
-                </li>
-              </div>
+              <li class="footer-menu__element footer-menu__row--heart">
+                <a class="footer-menu__item footer-menu__item--bold" href="#">Для поставщиков</a>
+              </li>
+              <li class="footer-menu__element">
+                <a class="footer-menu__item" href="#">Наши документы</a>
+              </li>
+              <li class="footer-menu__element">
+                <a class="footer-menu__item" href="#">О производстве</a>
+              </li>
+              <li class="footer-menu__element">
+                <a class="footer-menu__item" href="#">Экологические стандарты</a>
+              </li>
             </ul>
           </nav>
           <section class="footer-copyright">

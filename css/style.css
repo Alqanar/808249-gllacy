@@ -1935,15 +1935,17 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 324px;
+  flex-wrap: wrap;
+  margin-left: 12px;
 }
 
-.footer-menu__navigation li {
+.footer-menu__element {
   margin-bottom: 3px;
 }
 
-.main-footer__column-wrapper {
-  margin-right: 19px;
-  padding-left: 13px;
+.footer-menu__element:nth-of-type(odd) {
+  width: 44%;
 }
 
 .footer-menu__row--heart {
