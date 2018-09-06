@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог - Интернет-магазин мороженого Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body class="catalog-page">
@@ -184,13 +185,13 @@
             <h2 class="visual-hidden">Фильтр мороженок</h2>
             <div class="filters__first-row">
               <div class="filters__select">
+                <label class="filters__label filters__label--select" for="select-sorting">Сортировка:</label>
                 <select class="filters__field filters__block--sorting" name="select-sorting" id="select-sorting">
                   <option value="popular" selected>по популярности</option>
                   <option value="from cheap">сначала недорогие</option>
                   <option value="from expensive">сначала дорогие</option>
                   <option value="fat content">по жирности</option>
                 </select>
-                <label class="filters__label filters__label--select" for="select-sorting">Сортировка:</label>
               </div>
               <div class="filters__range">
                 <div class="range__price-controls">
@@ -199,13 +200,10 @@
                 </div>
                 <div class="range__controls">
                   <div class="range__scale">
-                    <div class="range__bar">
-                    </div>
+                    <div class="range__bar"></div>
                   </div>
-                  <div class="range__toggle range__toggle-min">
-                  </div>
-                  <div class="range__toggle range__toggle-max">
-                  </div>
+                  <div class="range__toggle range__toggle-min"></div>
+                  <div class="range__toggle range__toggle-max"></div>
                 </div>
               </div>
               <div class="filters__radio">
