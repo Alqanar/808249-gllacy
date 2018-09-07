@@ -1393,7 +1393,7 @@ a {
 
 .ice-cream-list__price {
   position: absolute;
-  bottom: 4.6%;
+  bottom: 13px;
   margin: 0;
   font-size: 45px;
   line-height: 45px;
