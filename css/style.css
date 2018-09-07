@@ -333,6 +333,12 @@ a {
           align-items: center;
 }
 
+.controls-menu__field,
+.subscription__form-field {
+  font-size: 14px;
+  line-height: 24px;
+}
+
 .controls-menu__field::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 24px;
