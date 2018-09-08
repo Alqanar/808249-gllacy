@@ -313,6 +313,7 @@ a {
   margin-top: 14px;
   max-width: 275px;
   min-width: 275px;
+  justify-content: flex-end;
 }
 
 .controls-menu__wrapper,
