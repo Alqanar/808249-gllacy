@@ -311,13 +311,14 @@ a {
       flex-wrap: wrap;
   margin-left: auto;
   margin-top: 14px;
-  min-width: 256px;
+  max-width: 275px;
 }
 
 .controls-menu__wrapper,
 .controls-menu__wrapper-active {
   position: relative;
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .controls-menu__item {
@@ -490,6 +491,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .orange-button:hover,
@@ -517,6 +519,7 @@ a {
   padding-right: 24px;
   margin-right: 20px;
   padding-top: 2px;
+  max-width: 100px;
 }
 
 .popup-login__footer {
@@ -1190,6 +1193,7 @@ a {
   margin-top: auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  word-break: break-all;
 }
 
 .filters__button:hover {
@@ -1259,6 +1263,7 @@ a {
   line-height: 22px;
   font-weight: 700;
   margin-top: 15px;
+  margin-bottom: 22px;
 }
 
 .shares__orange-button {
@@ -1443,7 +1448,7 @@ a {
 .ice-cream-list__orange-button {
   display: inline-block;
   overflow: hidden;
-  max-width: 90%;
+  max-width: 91%;
   padding-top: 11px;
   margin-top: auto;
   margin-right: auto;
@@ -1478,7 +1483,7 @@ a {
   line-height: 30px;
   text-align: left;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   letter-spacing: 0.2px;
 }
 
@@ -1490,7 +1495,7 @@ a {
   line-height: 22px;
   font-weight: 400;
   vertical-align: text-top;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   margin-left: 1px;
 }
 
@@ -1607,6 +1612,7 @@ a {
 
 .subscription_text {
   margin: 0;
+  margin-bottom: 14px;
 }
 
 .subscription_form-wrapper {
@@ -1676,7 +1682,10 @@ a {
 
 .subscription__orange-button {
   padding: 9px 19px 11px 19px;
+  min-width: 130px;
+  max-width: 130px;
   margin-bottom: 1px;
+  word-break: break-all;
 }
 
 .contacts {
@@ -1690,7 +1699,8 @@ a {
   top: 0;
   right: 50%;
   width: 100%;
-  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
   min-width: 900px;
   max-width: 1200px;
 }
@@ -1867,7 +1877,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 26px;
+  padding-bottom: 13px;
   padding-top: 18px;
 }
 
@@ -1882,6 +1892,9 @@ a {
   margin-top: 18px;
   margin-bottom: 2px;
   margin-left: 2px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 200px;
 }
 
 .main-footer__social-button {
@@ -1892,6 +1905,7 @@ a {
   border-radius: 50%;
   opacity: 0.8;
   margin-right: 11px;
+  margin-bottom: 11px;
   text-indent: -10000px;
   vertical-align: top;
 }
@@ -1935,7 +1949,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   width: 324px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: 12px;
 }
 
