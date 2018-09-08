@@ -312,6 +312,7 @@ a {
   margin-left: auto;
   margin-top: 14px;
   max-width: 275px;
+  min-width: 275px;
 }
 
 .controls-menu__wrapper,
@@ -791,6 +792,7 @@ a {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   cursor: pointer;
   margin-top: 2px;
+  word-break: break-all;
 }
 
 .orange-button--large:hover,
@@ -1685,7 +1687,6 @@ a {
   min-width: 130px;
   max-width: 130px;
   margin-bottom: 1px;
-  word-break: break-all;
 }
 
 .contacts {
