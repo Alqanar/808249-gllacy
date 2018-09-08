@@ -311,6 +311,7 @@ a {
       flex-wrap: wrap;
   margin-left: auto;
   margin-top: 14px;
+  min-width: 256px;
 }
 
 .controls-menu__wrapper,
@@ -593,7 +594,7 @@ a {
 }
 
 .basket__button {
-  height: 50px;
+  min-height: 50px;
   padding-left: 3px;
   cursor: pointer;
 }
@@ -653,7 +654,7 @@ a {
   padding-left: 16px;
   padding-right: 15px;
   margin-right: 13px;
-  margin-left: 353.5px;
+  margin-left: 352px;
 }
 
 .main-header__contacts {
@@ -769,7 +770,6 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 65px;
   padding: 9px 40px 12px 41px;
   font-size: 32px;
   line-height: 44px;
@@ -777,6 +777,8 @@ a {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 50px;
+  min-height: 65px;
+  max-width: 80%;
   -webkit-box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
           box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   font-weight: 700;
@@ -1440,13 +1442,17 @@ a {
 
 .ice-cream-list__orange-button {
   display: inline-block;
-  width: 100%;
-  max-width: 200px;
+  overflow: hidden;
+  max-width: 90%;
   padding-top: 11px;
   margin-top: auto;
   margin-right: auto;
   margin-left: auto;
   vertical-align: top;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
@@ -1595,6 +1601,10 @@ a {
   margin-left: 2.3%;
 }
 
+.subscription__form-field {
+  padding-top: 4px;
+}
+
 .subscription_text {
   margin: 0;
 }
@@ -1604,9 +1614,6 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   margin-top: auto;
 }
 
@@ -1668,7 +1675,7 @@ a {
 }
 
 .subscription__orange-button {
-  padding: 9px 19px 12px 19px;
+  padding: 9px 19px 11px 19px;
   margin-bottom: 1px;
 }
 
@@ -1981,7 +1988,7 @@ a {
 }
 
 .footer-copyright {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .footer-copyright__author,
